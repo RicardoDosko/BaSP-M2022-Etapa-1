@@ -1,0 +1,83 @@
+header {
+    background-color: #373867;
+    height: 51px;
+    padding: 13px 43px;
+}
+
+.container-logo {
+    width: 350px;
+}
+
+
+/* h1 {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: white;
+    float: right;
+} */
+
+.rr-logo {
+    display: inline;
+    height: 51px;
+}
+
+aside {
+    background-color: #aace9b;
+    width: 158px;
+    height: 860px;
+    padding: 20px 13px;
+}
+
+aside>h2 {
+    font-size: larger;
+    color: #373867;
+    margin-bottom: 13px;
+    font-family: sans-serif;
+}
+
+.am1 {
+    width: 100px;
+    height: 4px;
+    border-radius: 60px;
+    margin-bottom: 13px;
+    background-color: #373867;
+}
+
+.menu-list {
+    margin-bottom: 13px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #373867;
+}
+
+.menu-list-contact {
+    margin-bottom: 13px;
+    padding-bottom: 13px;
+}
+
+.menu-list>a {
+    color: #373867;
+    font-size: 12px;
+}
+
+.menu-list-contact>h3 {
+    color: #373867;
+    font-size: 12px;
+    margin-bottom: 35px;
+}
+
+.contact-icons {
+    display: inline;
+    width: 10px;
+}
+
+.sub-list {
+    display: block;
+    font-size: 12px;
+    color: #373867;
+    margin-bottom: 35px;
+}
+
+.sub-list>img,
+.sub-list>p {
+    display: inline;
+}
