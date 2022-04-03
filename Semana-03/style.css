@@ -1,38 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+body {
+    width: 1440px;
+    height: auto;
+    font-family: roboto;
+    color: #373867;
+}
+
 header {
     background-color: #373867;
     height: 51px;
     padding: 13px 43px;
 }
 
-.container-logo {
-    width: 350px;
-}
-
-
-/* h1 {
+h1 {
     font-family: 'Arial Narrow Bold', sans-serif;
     font-size: 40px;
     color: white;
     float: right;
-} */
+}
+
+ol {
+    list-style-type: decimal;
+    font-size: 20px;
+}
+
+.container-logo {
+    width: 280px;
+}
 
 .rr-logo {
-    display: inline;
     height: 51px;
 }
 
 aside {
+    display: inline-block;
     background-color: #aace9b;
     width: 158px;
     height: 860px;
     padding: 20px 13px;
 }
 
-aside>h2 {
+aside>span {
+    display: inline-block;
     font-size: larger;
     color: #373867;
     margin-bottom: 13px;
-    font-family: sans-serif;
+    font-family: roboto;
+}
+
+.span-sl {
+    display: inline-block;
+    font-size: 12px;
+    color: #373867;
+    margin-bottom: 13px;
+    font-family: roboto;
 }
 
 .am1 {
@@ -67,7 +89,7 @@ aside>h2 {
 
 .contact-icons {
     display: inline;
-    width: 10px;
+    width: 16px;
 }
 
 .sub-list {
@@ -77,7 +99,162 @@ aside>h2 {
     margin-bottom: 35px;
 }
 
-.sub-list>img,
 .sub-list>p {
     display: inline;
+}
+
+main {
+    width: 1110px;
+    display: inline;
+    float: right;
+    padding-left: 68px;
+    padding-right: 78px;
+    padding-top: 57px;
+}
+
+.first-section {
+    height: 482px;
+    border-bottom: 2px solid #373867;
+}
+
+.manage-hour {
+    display: inline;
+    width: 50%;
+    height: 387px;
+    float: left;
+}
+
+.title-fs {
+    font-size: 40px;
+    margin-bottom: 19.16px;
+}
+
+.subtitle-fs {
+    font-size: 20px;
+    margin-bottom: 42.14px;
+}
+
+.text-fs {
+    font-size: 15px;
+    margin-bottom: 18.7px;
+    width: 516.53px;
+}
+
+.button-fs {
+    position: relative;
+    width: 149px;
+    height: 46px;
+    border-radius: 5px;
+    left: 380px;
+    background-color: white;
+}
+
+.productivity {
+    display: inline;
+    width: 520.2px;
+    height: 387px;
+    border-radius: 10px;
+    float: right;
+}
+
+.second-section {
+    margin-top: 57px;
+    width: 1130px;
+    height: 700px;
+}
+
+.second-section h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.box-color {
+    background-color: #aace9b;
+    width: 234px;
+    height: 3px;
+    border-radius: 3px;
+    margin-bottom: 50px;
+}
+
+.second-section-a {
+    width: 536px;
+    height: 505px;
+    float: left;
+}
+
+.second-section-b {
+    width: 536px;
+    height: 505px;
+    float: right;
+}
+
+.second-section-ab {
+    width: 534px;
+    height: 213px;
+}
+
+.ss-img {
+    width: 140px;
+    height: 140px;
+    display: inline;
+    float: left;
+    text-align: center;
+    margin-right: 23px;
+}
+
+.funcionalities-text {
+    display: inline-block;
+    width: 314px;
+    height: 144px;
+    padding-top: 40px;
+}
+
+.funcionalities-text h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.maps-site {
+    width: 1110px;
+    height: 267px;
+    border-top: 3px solid #373867;
+}
+
+.container-ol-products {
+    display: inline-block;
+    width: 160px;
+    height: 115px;
+    margin-top: 57px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+footer {
+    display: inline-block;
+    width: 1110px;
+    height: 97px;
+    border-top: 3px solid #aace9b;
+    margin-right: 78px;
+    margin-left: 251px;
+}
+
+.social-media {
+    height: 40px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.icon-links {
+    height: 40px;
+    width: 40px;
+    margin-right: 40px;
+}
+
+.footer-text {
+    float: right;
+    margin: 16px 12px 15px 297.74px;
+}
+
+.footer-text p {
+    margin-bottom: 31px;
 }
