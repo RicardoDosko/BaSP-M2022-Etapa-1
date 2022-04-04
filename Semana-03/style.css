@@ -34,7 +34,7 @@ ol {
 aside {
     display: inline-block;
     position: sticky;
-    /* top: 0px; */
+    top: 0px;
     background-color: #aace9b;
     width: 158px;
     height: 860px;
@@ -81,12 +81,6 @@ aside>span {
     font-size: 12px;
 }
 
-.menu-list-contact>h3 {
-    color: #373867;
-    font-size: 12px;
-    margin-bottom: 35px;
-}
-
 .contact-icons {
     display: inline;
     width: 16px;
@@ -114,7 +108,7 @@ main {
 
 .first-section {
     height: 482px;
-    border-bottom: 2px solid #373867;
+    border-bottom: 2px solid rgb(55, 56, 103, 10%);
 }
 
 .manage-hour {
@@ -161,7 +155,7 @@ main {
     margin-top: 57px;
     width: 1130px;
     height: 698px;
-    border-bottom: 2px solid #AFAFC2;
+    border-bottom: 2px solid rgb(55, 56, 103, 10%);
 }
 
 .second-section h2 {
@@ -218,7 +212,7 @@ main {
 .third-section {
     width: 1110px;
     height: 1487px;
-    border-bottom: 2px solid #AFAFC2;
+    border-bottom: 2px solid rgb(55, 56, 103, 10%);
     margin-bottom: 57px;
 }
 
@@ -253,7 +247,6 @@ main {
 
 .text-card {
     font-size: 20px;
-    /* margin-bottom: 117px; */
 }
 
 .button-card {
@@ -282,7 +275,20 @@ main {
 .fourth-section-form {
     width: 1110px;
     height: 638px;
-    border-bottom: 2px solid #AFAFC2;
+    border-bottom: 2px solid rgb(55, 56, 103, 10%);
+    margin-bottom: 57px;
+}
+
+.title-form {
+    font-size: 30px;
+}
+
+.box-color-fs {
+    width: 297px;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: #aace9b;
 }
 
 .form-part-one {
@@ -291,23 +297,95 @@ main {
     float: left;
 }
 
+.name {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.select-form {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+}
+
 .form-part-two {
     display: inline-block;
     width: 45%;
+    margin-left: 100px;
+}
+
+.mail-form {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.radio-form {
+    display: block;
+    width: 80%;
+    margin-top: 7px;
 }
 
 .form-part-three {
     width: 100%;
+    margin-top: 7px;
+}
+
+.textarea {
+    display: block;
+    width: 100%;
+    height: 117px;
+    margin-top: 7px;
+    margin-bottom: 40px;
 }
 
 .inputs-form {
     width: 100%;
+    margin-bottom: 12px;
+}
+
+.form-part-four {
+    margin-bottom: 40px;
+}
+
+.submit {
+    width: 113px;
+    height: 47px;
+    background-color: #aace9b;
+    border: none;
+    border-radius: 5px;
+}
+
+.reset {
+    width: 113px;
+    height: 47px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 42.25px;
+}
+
+.fifth-section {
+    margin-bottom: 95px;
+}
+
+.title-five-section {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.box-color-history {
+    width: 156px;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: #aace9b;
 }
 
 .maps-site {
     width: 1110px;
     height: 267px;
-    border-top: 3px solid #373867;
+    border-top: 3px solid rgb(55, 56, 103, 10%);
 }
 
 .container-ol-products {
@@ -317,6 +395,17 @@ main {
     margin-top: 57px;
     margin-right: 100px;
     margin-left: 100px;
+}
+
+.list-maps {
+    margin-top: 2px;
+    margin-bottom: 3px;
+}
+
+.list-maps a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #373867;
 }
 
 footer {
@@ -332,6 +421,10 @@ footer {
     height: 40px;
     display: inline-block;
     margin-top: 30px;
+}
+
+.social-media a {
+    text-decoration: none;
 }
 
 .icon-links {
