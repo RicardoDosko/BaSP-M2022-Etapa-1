@@ -20,21 +20,21 @@ To enter the project index, download the entire project from the github repo. Bo
 ```
 ##  Task Done
 ```
-## Header
+### Header
 ```
 The Header has an image that contains the logo, and the name of the company that develops the requested software. And an H1 Tag as the main title of the page that contains the name of the Trackgenix company.
 ```
-## Aside
+### Aside
 ```
 The aside contains a menu of options which has a link to the menu, to a registration sector, to a login sector or also to the contact information of the company
 ```
-## Main
+### Main
 ```
 The main part is divided into sections by <Section> tags detailing the benefits you will find when hiring the services of the company and its advantages in the organization.
 It has a specific form to contact the company.
 In addition to knowing the history and a small map of the site that will guarantee easy access.
 ```
-## Footer
+### Footer
 ```
 The footer where you will find the access links to the company's social networks.
 ```
@@ -66,6 +66,8 @@ That is, the style of the header was developed first, then the sidebar, then the
 
 
 <img width="1173" alt="Captura de Pantalla 2022-04-05 a la(s) 23 16 56" src="https://user-images.githubusercontent.com/94139460/161882462-5b5e669b-54c2-488c-9bbe-fc358f86dab8.png">
+
+## Week 04
 
 _By Ricardo Nery Dosko_
 
