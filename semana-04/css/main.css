@@ -1,0 +1,24 @@
+main {
+    padding: 40px 20px;
+}
+
+.manage-hour {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*Funcionalities*/
+
+.second-section-ab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ss-img {
+    width: 140px;
+    height: 140px;
+}
