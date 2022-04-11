@@ -1,0 +1,75 @@
+aside {
+    display: none;
+    position: sticky;
+    top: 0px;
+    background-color: #aace9b;
+    width: 158px;
+    height: 860px;
+    padding: 20px 13px;
+}
+
+aside>span {
+    display: inline-block;
+    font-size: 14px;
+    color: #373867;
+    margin-bottom: 13px;
+    font-weight: 700;
+}
+
+.span-sl {
+    display: inline-block;
+    font-size: 12px;
+    color: #373867;
+    margin-bottom: 13px;
+    font-family: roboto;
+}
+
+.span-adress {
+    float: right;
+    margin-right: 15px;
+}
+
+.am1 {
+    width: 100px;
+    height: 4px;
+    border-radius: 60px;
+    margin-bottom: 13px;
+    background-color: #373867;
+}
+
+.menu-list {
+    margin-bottom: 13px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #373867;
+}
+
+.menu-list-contact {
+    margin-bottom: 13px;
+    padding-bottom: 13px;
+}
+
+.menu-list>a {
+    color: #373867;
+    font-size: 12px;
+}
+
+.contact-icons {
+    display: inline;
+    width: 16px;
+}
+
+.sub-list {
+    display: block;
+    font-size: 12px;
+    color: #373867;
+    margin-bottom: 35px;
+}
+
+.sub-list a {
+    text-decoration: none;
+    color: #373867;
+}
+
+.sub-list>p {
+    display: inline;
+}

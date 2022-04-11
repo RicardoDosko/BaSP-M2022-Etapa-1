@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-body {
-    width: 100%;
-    height: max-content;
-    font-family: 'Roboto', sans-serif;
-    color: #373867;
-}
-
 header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     background-color: #373867;
     height: 51px;
-    width: 100%;
-    padding: 20px 13px;
+    padding: 13px;
 }
 
 .rr-logo {

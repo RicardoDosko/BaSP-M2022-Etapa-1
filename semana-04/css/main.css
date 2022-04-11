@@ -1,24 +1,207 @@
-main {
-    padding: 40px 20px;
-}
-
-.manage-hour {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-/*Funcionalities*/
-
-.second-section-ab {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.ss-img {
-    width: 140px;
-    height: 140px;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        main {
+            padding: 40px 20px;
+        }
+        
+        .first-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .manage-hour {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .productivity {
+            display: flex;
+            justify-content: center;
+            width: 318px;
+            border-radius: 5px;
+        }
+        
+        .button-fs {
+            width: 95px;
+            height: 46px;
+            border: 1px solid #373867;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-bottom: 29px;
+        }
+        /*Funcionalities*/
+        
+        .second-section-ab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .title-second-section {
+            width: 100%;
+        }
+        
+        .box-color-functionalities {
+            width: 229px;
+            height: 3px;
+            margin-top: 5px;
+            margin-bottom: 50px;
+            border-radius: 5px;
+            background-color: #AACE9B;
+        }
+        
+        .funcionalities-text {
+            text-align: center;
+        }
+        
+        .ss-img {
+            width: 140px;
+            height: 140px;
+        }
+        /* third section */
+        
+        .box-color-ts {
+            width: 288px;
+            height: 3px;
+            border-radius: 5px;
+            background-color: #AACE9B;
+            margin-top: 21px;
+            margin-bottom: 50px;
+        }
+        
+        .cards {
+            width: 400px;
+            height: 487px;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: rgb(55, 56, 103, 10%);
+        }
+        
+        .images-card {
+            height: 225px;
+            margin-bottom: 17px;
+        }
+        
+        .button-card {
+            width: 68px;
+            height: 34px;
+            margin-top: 75px;
+            border: 1px solid #373867;
+            border-radius: 5px;
+            background-color: none;
+        }
+        /* FORMULARIO */
+        
+        .box-color-fs {
+            width: 218px;
+            height: 3px;
+            border-radius: 5px;
+            background-color: #AACE9B;
+            margin-top: 21px;
+            margin-bottom: 30px;
+        }
+        
+        label {
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+        
+        .select-form,
+        .name,
+        .mail-form {
+            display: block;
+            width: 400px;
+            height: 37px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .inputs-form {
+            width: 400px;
+            margin-bottom: 35px;
+        }
+        
+        .radio-form {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .form-part-three {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 116px;
+            margin-top: 13px;
+            margin-bottom: 13px;
+        }
+        
+        .radios {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .form-part-four {
+            display: flex;
+            justify-content: space-around;
+            font-family: "Roboto" "bold";
+            margin-bottom: 42px;
+        }
+        
+        .container-button {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .submit {
+            width: 84px;
+            height: 34px;
+            border-radius: 5px;
+            border: 1px solid #373867;
+            font-size: 12px;
+            background-color: #AACE9B;
+        }
+        
+        .reset {
+            width: 76px;
+            height: 34px;
+            border-radius: 5px;
+            border: 1px solid #373867;
+            font-size: 12px;
+            background-color: none;
+        }
+        /* Our History */
+        
+        .box-color-history {
+            width: 122px;
+            height: 3px;
+            border-radius: 5px;
+            background-color: #AACE9B;
+            margin-top: 21px;
+            margin-bottom: 50px;
+        }
+        /* section maps */
+        
+        .container-ol-products {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        
+        .maps-site {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        span {
+            margin-right: 70px;
+        }
+        
+        .maps-title-01 {
+            margin-right: 80px;
+        }

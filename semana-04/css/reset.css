@@ -114,7 +114,6 @@ body {
     line-height: 1;
 }
 
-ol,
 ul {
     list-style: none;
 }
@@ -141,4 +140,8 @@ html,
 body,
 #root {
     height: 100%
+}
+
+a {
+    text-decoration: none;
 }
