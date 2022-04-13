@@ -1,207 +1,341 @@
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-        main {
-            padding: 40px 20px;
-        }
-        
-        .first-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .manage-hour {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        
-        .productivity {
-            display: flex;
-            justify-content: center;
-            width: 318px;
-            border-radius: 5px;
-        }
-        
-        .button-fs {
-            width: 95px;
-            height: 46px;
-            border: 1px solid #373867;
-            border-radius: 5px;
-            font-size: 12px;
-            margin-bottom: 29px;
-        }
-        /*Funcionalities*/
-        
-        .second-section-ab {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .title-second-section {
-            width: 100%;
-        }
-        
-        .box-color-functionalities {
-            width: 229px;
-            height: 3px;
-            margin-top: 5px;
-            margin-bottom: 50px;
-            border-radius: 5px;
-            background-color: #AACE9B;
-        }
-        
-        .funcionalities-text {
-            text-align: center;
-        }
-        
-        .ss-img {
-            width: 140px;
-            height: 140px;
-        }
-        /* third section */
-        
-        .box-color-ts {
-            width: 288px;
-            height: 3px;
-            border-radius: 5px;
-            background-color: #AACE9B;
-            margin-top: 21px;
-            margin-bottom: 50px;
-        }
-        
-        .cards {
-            width: 400px;
-            height: 487px;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            background-color: rgb(55, 56, 103, 10%);
-        }
-        
-        .images-card {
-            height: 225px;
-            margin-bottom: 17px;
-        }
-        
-        .button-card {
-            width: 68px;
-            height: 34px;
-            margin-top: 75px;
-            border: 1px solid #373867;
-            border-radius: 5px;
-            background-color: none;
-        }
-        /* FORMULARIO */
-        
-        .box-color-fs {
-            width: 218px;
-            height: 3px;
-            border-radius: 5px;
-            background-color: #AACE9B;
-            margin-top: 21px;
-            margin-bottom: 30px;
-        }
-        
-        label {
-            font-size: 14px;
-            margin-bottom: 7px;
-        }
-        
-        .select-form,
-        .name,
-        .mail-form {
-            display: block;
-            width: 400px;
-            height: 37px;
-            border-radius: 5px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .inputs-form {
-            width: 400px;
-            margin-bottom: 35px;
-        }
-        
-        .radio-form {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .form-part-three {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        textarea {
-            width: 100%;
-            height: 116px;
-            margin-top: 13px;
-            margin-bottom: 13px;
-        }
-        
-        .radios {
-            display: flex;
-            justify-content: space-evenly;
-        }
-        
-        .form-part-four {
-            display: flex;
-            justify-content: space-around;
-            font-family: "Roboto" "bold";
-            margin-bottom: 42px;
-        }
-        
-        .container-button {
-            display: flex;
-            justify-content: space-around;
-        }
-        
-        .submit {
-            width: 84px;
-            height: 34px;
-            border-radius: 5px;
-            border: 1px solid #373867;
-            font-size: 12px;
-            background-color: #AACE9B;
-        }
-        
-        .reset {
-            width: 76px;
-            height: 34px;
-            border-radius: 5px;
-            border: 1px solid #373867;
-            font-size: 12px;
-            background-color: none;
-        }
-        /* Our History */
-        
-        .box-color-history {
-            width: 122px;
-            height: 3px;
-            border-radius: 5px;
-            background-color: #AACE9B;
-            margin-top: 21px;
-            margin-bottom: 50px;
-        }
-        /* section maps */
-        
-        .container-ol-products {
-            width: 100px;
-            margin-bottom: 20px;
-        }
-        
-        .maps-site {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        
-        span {
-            margin-right: 70px;
-        }
-        
-        .maps-title-01 {
-            margin-right: 80px;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+main {
+    margin-top: 77px;
+    padding: 40px 20px;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manage-hour {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.productivity {
+    display: flex;
+    justify-content: center;
+    width: 318px;
+    border-radius: 5px;
+}
+
+.button-fs {
+    width: 95px;
+    height: 46px;
+    border: 1px solid rgb(55, 56, 103);
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 29px;
+    background-color: white;
+}
+
+
+/*Funcionalities*/
+
+.second-section-ab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-second-section {
+    width: 100%;
+}
+
+.box-color-functionalities {
+    width: 229px;
+    height: 3px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    background-color: rgb(170, 206, 155);
+}
+
+.funcionalities-text {
+    text-align: center;
+}
+
+.ss-img {
+    width: 140px;
+    height: 140px;
+}
+
+
+/* third section */
+
+.third-section {
+    height: max-content;
+}
+
+.box-color-ts {
+    width: 288px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgb(170, 206, 155);
+    margin-top: 21px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    width: 80%;
+    height: auto;
+    padding: 10%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: rgb(55, 56, 103, 10%);
+}
+
+.images-card {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 17px;
+}
+
+.button-card {
+    width: 68px;
+    height: 34px;
+    margin-top: 75px;
+    border: 1px solid rgb(55, 56, 103);
+    border-radius: 5px;
+    background-color: none;
+}
+
+
+/* FORMULARIO */
+
+.box-color-fs {
+    width: 218px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgb(170, 206, 155);
+    margin-top: 21px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.select-form,
+.name,
+.mail-form {
+    display: block;
+    width: 400px;
+    height: 37px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.inputs-form {
+    width: 400px;
+    margin-bottom: 35px;
+}
+
+.radio-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-part-three {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 98%;
+    height: 116px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.radios {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-part-four {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Roboto" "bold";
+    margin-bottom: 42px;
+}
+
+.container-button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.submit {
+    width: 84px;
+    height: 34px;
+    border-radius: 5px;
+    border: 1px solid rgb(55, 56, 103);
+    font-size: 12px;
+    background-color: rgb(170, 206, 155);
+}
+
+.reset {
+    width: 76px;
+    height: 34px;
+    border-radius: 5px;
+    border: 1px solid rgb(55, 56, 103);
+    font-size: 12px;
+    background-color: none;
+}
+
+
+/* Our History */
+
+.box-color-history {
+    width: 122px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgb(170, 206, 155);
+    margin-top: 21px;
+    margin-bottom: 50px;
+}
+
+
+/* section maps */
+
+.container-ol-products {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.maps-site {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.maps-title {
+    margin-right: 70px;
+}
+
+.maps-title-01 {
+    margin-right: 80px;
+}
+
+@media (min-width: 481px) {
+    .productivity {
+        width: 100%;
+    }
+    .second-section-ab {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .funcionalities-text {
+        display: inline-block;
+    }
+    .container-cards {
+        display: flex;
+        flex-direction: row;
+    }
+    .cards {
+        width: 80%;
+        height: 45%;
+        border-radius: 5px;
+        background-color: rgb(55, 56, 103, 10%);
+    }
+    .card-left {
+        margin-right: 10%;
+    }
+    .card-left,
+    .card-right {
+        width: 45%;
+    }
+    .form-part-first {
+        display: flex;
+        width: 100%;
+    }
+    .form-part-one {
+        width: 100%;
+    }
+    .form-part-two {
+        width: 100%;
+    }
+    .inputs-form {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .select-form,
+    .name,
+    .mail-form {
+        width: 90%;
+    }
+    .radio-form {
+        margin-top: 30px;
+    }
+    .form-part-four {
+        display: flex;
+        justify-content: center;
+    }
+    .checkbox {
+        margin-right: 10%;
+    }
+    .container-button {
+        display: flex;
+        justify-content: center;
+    }
+    .submit {
+        margin-right: 10%;
+    }
+    .maps-site {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin-left: 10%;
+        justify-content: space-around;
+    }
+    .container-general {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        padding: 5%;
+        margin-left: 16%;
+    }
+    .first-section {
+        display: flex;
+        flex-direction: row-reverse;
+        align-self: center;
+    }
+    .productivity {
+        width: 45%;
+        margin-left: 10%;
+    }
+    .articles {
+        display: flex;
+        flex-direction: row;
+    }
+    .second-section-a {
+        width: 45%;
+        margin-right: 5%;
+    }
+    .second-section-b {
+        width: 45%;
+        margin-left: 5%;
+    }
+    .second-section-ab {
+        width: 100%;
+    }
+    .container-button-fs {
+        display: flex;
+        align-self: flex-end;
+    }
+}

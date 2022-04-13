@@ -68,6 +68,9 @@ That is, the style of the header was developed first, then the sidebar, then the
 <img width="1173" alt="Captura de Pantalla 2022-04-05 a la(s) 23 16 56" src="https://user-images.githubusercontent.com/94139460/161882462-5b5e669b-54c2-488c-9bbe-fc358f86dab8.png">
 
 ## Week 04
+At this stage we develop the website in a responsive way so that it can be viewed on different types of devices.
+
+https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
 _By Ricardo Nery Dosko_
 
