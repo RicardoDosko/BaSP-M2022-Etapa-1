@@ -72,6 +72,34 @@ At this stage we develop the website in a responsive way so that it can be viewe
 
 https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
+## week 05
+```
+In week 5, the exercises to be solved are the basis for understanding how javascript works. Know how to differentiate specific concepts, types of variables, objects, arrays, functions, iteration loops, among others, and apply them to solve the problem posed.
+```
+```
+By the end of the fifth week, participants should have acquired the following skills:
+
+1 -Understand the logic of process automation.
+2- Understand the difference between the types of programming languages.
+3-Understand JavaScript syntax and tools to solve problems.
+4-Acquire the ability to propose a valid solution for a particular problem.
+```
+```
+The exercises will be pushed, classifying them in different files, bearing the name, each of them, corresponding to the concepts that are going to be worked on.
+```
+The names of the files will be the following in the order described.
+
+    01_variables_and_operators.js
+    02_strings.js
+    03_arrays.js
+    04_if_else.js
+    05_for.js
+    06_functions.js
+
+The results of these exercises can be seen in the console of the index.html created to link them.
+
+For easy access, we will leave the github pages.
+
 _By Ricardo Nery Dosko_
 
 
