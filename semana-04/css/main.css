@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 main {
     margin-top: 77px;
-    padding: 40px 20px;
+    padding: 20px 5%;
+    width: 90%;
+    margin-left: 16%;
+}
+
+a {
+    color: rgb(55, 56, 103);
+    ;
 }
 
 .first-section {
@@ -152,6 +159,9 @@ textarea {
     height: 116px;
     margin-top: 13px;
     margin-bottom: 13px;
+    font-family: Roboto;
+    color: rgb(55, 56, 103);
+    padding: 0%;
 }
 
 .radios {
@@ -175,7 +185,7 @@ textarea {
     width: 84px;
     height: 34px;
     border-radius: 5px;
-    border: 1px solid rgb(55, 56, 103);
+    text-decoration: none;
     font-size: 12px;
     background-color: rgb(170, 206, 155);
 }
@@ -231,9 +241,16 @@ textarea {
         display: flex;
         flex-direction: row;
         width: 100%;
+        margin-bottom: 20px;
     }
     .funcionalities-text {
-        display: inline-block;
+        display: flex;
+        text-align: left;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .ss-img {
+        margin-right: 23px;
     }
     .container-cards {
         display: flex;
@@ -293,7 +310,7 @@ textarea {
         display: flex;
         flex-direction: row;
         width: 90%;
-        margin-left: 10%;
+        align-self: center;
         justify-content: space-around;
     }
     .container-general {
@@ -308,7 +325,6 @@ textarea {
         flex-direction: column;
         width: 75%;
         padding: 5%;
-        margin-left: 16%;
     }
     .first-section {
         display: flex;

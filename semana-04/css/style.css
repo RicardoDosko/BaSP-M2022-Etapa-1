@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 body {
     font-family: 'Roboto';
-    color: #373867;
+    color: rgb(55, 56, 103);
+    height: max-content;
 }
 
-.images-card {
-    width: 400px;
-    border-radius: 5px;
+input {
+    border: 1px solid rgb(55, 56, 103);
 }
 
 h3,
@@ -43,6 +43,16 @@ p {
     font-size: 14px;
     margin-bottom: 29px;
     color: #373867;
+}
+
+button {
+    border: none;
+    color: rgb(56, 56, 103);
+}
+
+.images-card {
+    width: 400px;
+    border-radius: 5px;
 }
 
 .central-page {
