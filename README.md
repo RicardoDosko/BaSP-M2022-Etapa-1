@@ -100,6 +100,8 @@ The results of these exercises can be seen in the console of the index.html crea
 
 For easy access, we will leave the github pages.
 
+https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
+
 _By Ricardo Nery Dosko_
 
 
