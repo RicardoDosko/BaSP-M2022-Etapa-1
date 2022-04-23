@@ -72,7 +72,7 @@ At this stage we develop the website in a responsive way so that it can be viewe
 
 https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
-## week 05
+## Week 05
 ```
 In week 5, the exercises to be solved are the basis for understanding how javascript works. Know how to differentiate specific concepts, types of variables, objects, arrays, functions, iteration loops, among others, and apply them to solve the problem posed.
 ```
@@ -85,7 +85,8 @@ By the end of the fifth week, participants should have acquired the following sk
 4-Acquire the ability to propose a valid solution for a particular problem.
 ```
 ```
-The exercises will be pushed, classifying them in different files, bearing the name, each of them, corresponding to the concepts that are going to be worked on.
+The exercises will be pushed, classifying them in different files, bearing the 
+name, each of them, corresponding to the concepts that are going to be worked on.
 ```
 The names of the files will be the following in the order described.
 
@@ -99,8 +100,13 @@ The names of the files will be the following in the order described.
 The results of these exercises can be seen in the console of the index.html created to link them.
 
 For easy access, we will leave the github pages.
-
 https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
+
+## Week 05
+```
+In week 6, the log in and sing up screens were created with their respective css and js files, 
+so that with the latter, the validations of the different forms of the new screens could be carried out.
+
 
 _By Ricardo Nery Dosko_
 
