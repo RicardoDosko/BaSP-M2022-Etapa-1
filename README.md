@@ -102,11 +102,12 @@ The results of these exercises can be seen in the console of the index.html crea
 For easy access, we will leave the github pages.
 https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 
-## Week 05
+## Week 06
 ```
 In week 6, the log in and sing up screens were created with their respective css and js files, 
 so that with the latter, the validations of the different forms of the new screens could be carried out.
 
+https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-06/index.html
 
 _By Ricardo Nery Dosko_
 

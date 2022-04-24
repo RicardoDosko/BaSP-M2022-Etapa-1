@@ -5,31 +5,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script href="../javascript/sing-up.js"></script>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/sing-up.css">
+    <script src="../javascript/sing-up.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <img class="rr-logo" src="../assets/icons/trackgenix-logo.png" alt="logo-header">
+        <a href="./index.html"><img class="rr-logo" href="./index.html" src="../assets/icons/trackgenix-logo.png" alt="logo-header"></a>
         <h1>
             Trackgenix SA
         </h1>
         <img class="sidebar-menu" src="../assets/icons/sidebar-icon.png" alt="sidebar">
     </header>
-    <div class="Login-container">
+    <div class="sing-up-container">
         <div class="form-container">
-            <p>
-                Log In
-            </p>
-            <div>
+            <h2>
+                Sing-up
+            </h2>
+            <div class="formContainer">
+                <form class="inscription" id="inscription" action="/my-handling-form-page" method="post" onsubmit="handleOnSubmit()">
+                    <ul class="formul">
+                        <div class="one-part">
+                            <li id="names">
+                                <label for="name">First Name:</label>
+                                <input type="text" id="name" name="user_name" placeholder="Juan" onfocus="correccionName()" onblur="verifyName()">
+                                <p id="pName" class="errorName colorError">Must contain at least 3 letters</p>
+                            </li>
+                            <li id="last-names">
+                                <label for="name">Last Name:</label>
+                                <input type="text" id="last-name" name="user_name" placeholder="Perez" onfocus="correctionLastName()" onblur="verifyLastName()">
+                                <p id="p-last-Name" class="error-last-Name colorError">Must contain at least 3 letters</p>
+                            </li>
+                            <li class="mail">
+                                <label for="mail">E-mail:</label>
+                                <input type="email" id="mail" name="user_mail" placeholder="example@example.com" onfocus="correccionMail()" onblur="blurMail()">
+                                <p id="pMail" class="errorEmail colorError">Must have a valid email format</p>
+                            </li>
+                            <li>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="pass" placeholder="debe contener al menos 8 caracteres " onfocus="correccionPass()" onblur="blurPass1()">
+                                <p id="pPassword" class="passwordError colorError">At least 8 characters, made up of letters and numbers.</p>
 
+                            </li>
+                            <li>
+                                <label for="password2">Confirm Password:</label>
+                                <input type="password" id="password2" name="pass" placeholder="debe coincidir contraseña" onfocus="correccionPass2()" onblur="blurpass2()">
+                                <p id="pPassword2" class="password2Error colorError ">passwords must match</p>
+                            </li>
+                            <li>
+                                <!-- <label for="age">Edad:</label>
+                                <input type="number" id="age" name="age" placeholder="Debe ser mayor de 18 años" onfocus="correccionAge()" onblur="blurAge()"> -->
+                                <label for="start">Date of birth:</label>
+                                <input type="date" id="dateOfBirth" name="date-of-birth">
+                                <p id="pAge" class="errorAge colorError">You must be over 18 years old</p>
+                            </li>
+                        </div>
+                        <div class="twopart">
+                            <li>
+                                <label for="phoneNumber">Phone number:</label>
+                                <input type="number" id="phone" name="phoneNumbers" placeholder="3415501646" onfocus="correccionPhone()" onblur=" blurPhone()">
+                                <p id="pPhone" class="errorPhone colorError">Must contain at least 7 numbers</p>
+                            </li>
+                            <li>
+                                <label for="adress">Address:</label>
+                                <input type="text" id="adress" name="adress" placeholder="ejemplo 453" onfocus="correccionAdress()" onblur="blurAdress()">
+                                <p id="pAdress" class="errorAdress colorError">At least 5 characters, with letters, numbers, and a space in between</p>
+                            </li>
+                            <li>
+                                <label for="city">city:</label>
+                                <input type="city" name="city" id="city" placeholder="Ejemplo" onfocus="correccionCity()" onblur="blurCity()">
+                                <p id="cityText" class="errorCity colorError">Debe contener al menos 3 caracteres</p>
+                            </li>
+                            <li>
+                                <label for="postalCode">Postal Code:</label>
+                                <input type="text" name="postal" id="postalCode" onfocus="correccionCode()" onblur="blurPostal()">
+                                <p id="postalText" class="errorCode colorError">Must contain more than 3 digits</p>
+
+                            </li>
+
+                            <li>
+                                <label for="identityDocument">Identification Card:</label>
+                                <input type="number" name="dni" id="dni" onfocus="correccionDni()" onblur="blurDni()">
+                                <p id="dniText" class="errorDni colorError">Must contain 7 or 8 digits</p>
+                            </li>
+                            <li class="button">
+                                <button type="submit" class="sing-up-button">Continue</button>
+                            </li>
+                        </div>
+                    </ul>
+                </form>
             </div>
         </div>
     </div>
+    <div class="box-color-footer"></div>
     <footer>
-        <div class="box-color-footer"></div>
+
         <div class="footer-description">
             <div class="social-media">
                 <a href="#">
