@@ -116,7 +116,7 @@ function verifyPassword1() {
             nume++;
         }
     }
-    if (password.length - 1 >= 8) {
+    if (password.length >= 8) {
         document.getElementById('password').style.border = "3px solid green";
         inputC = true;
     } else {
