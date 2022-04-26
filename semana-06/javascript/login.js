@@ -5,7 +5,8 @@ function verifyMail() {
         document.getElementById('mail').style.border = '3px solid red';
         document.getElementById('pMail').classList.remove('errorEmail');
     } else {
-        document.getElementById('email').style.border = '3px solid green';
+        console.log("entro")
+        document.getElementById('mail').style.border = '3px solid green';
     }
 }
 
@@ -42,6 +43,7 @@ function verifyPassword1() {
             nume++;
         }
     }
+    // h,o,l,a,1,2,3,4
     if (password.length - 1 > 8) {
         document.getElementById('password').style.border = "3px solid green";
     } else {
@@ -53,7 +55,7 @@ function verifyPassword1() {
         document.getElementById("pPassword").classList.remove("passwordError");
     } else {
         document.getElementById('password').style.border = "3px solid green";
-        inputC = true;
+
     }
 }
 //focus 

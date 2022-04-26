@@ -24,6 +24,7 @@ function verifyName() {
         if (!abc.includes(name[i].toLowerCase())) {
             document.getElementById('name').style.border = "3px solid red";
             document.getElementById('pName').classList.remove("errorName");
+            inputA = false
             return ("escribe respuesta correcta");
 
         }
@@ -32,22 +33,22 @@ function verifyName() {
     if (name.length < 3) {
         document.getElementById('name').style.border = "3px solid red";
         document.getElementById('pName').classList.remove("errorName");
+        inputA = false
     } else {
         document.getElementById('name').style.border = "3px solid green";
         inputA = true;
     }
-
 }
 
 //---------------------LAST NAME------------------//
 
 function verifyLastName() {
     const abc = [" ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    const lastName = document.getElementById('last-name').value;
+    const lastName = document.getElementById('lastName').value;
     //aca verificamos que sea un nombre
     for (let i = 0; i < lastName.length; i++) {
         if (!abc.includes(lastName[i].toLowerCase())) {
-            document.getElementById('last-name').style.border = "3px solid red";
+            document.getElementById('lastName').style.border = "3px solid red";
             document.getElementById('p-last-Name').classList.remove("error-last-Name");
             return ("escribe respuesta correcta");
 
@@ -55,11 +56,12 @@ function verifyLastName() {
     }
 
     if (lastName.length < 3) {
-        document.getElementById('last-name').style.border = "3px solid red";
+        document.getElementById('lastName').style.border = "3px solid red";
         document.getElementById('p-last-Name').classList.remove("error-last-Name");
+        inputE = false;
     } else {
-        document.getElementById('last-name').style.border = "3px solid green";
-        inputA = true;
+        document.getElementById('lastName').style.border = "3px solid green";
+        inputE = true;
     }
 
 }
@@ -83,10 +85,12 @@ function verifyMail() {
 
             document.getElementById("mail").style.border = "3px solid red";
             document.getElementById('pMail').classList.remove("errorEmail");
+            inputB = false;
         }
     } else {
         document.getElementById('pMail').classList.remove("errorEmail");
         document.getElementById("mail").style.border = "3px solid red";
+        inputB = false;
     }
 
 
@@ -111,15 +115,18 @@ function verifyPassword1() {
             nume++;
         }
     }
-    if (password.length - 1 > 8) {
+    if (password.length >= 8) {
         document.getElementById('password').style.border = "3px solid green";
+        inputC = true;
     } else {
         document.getElementById('password').style.border = "3px solid red";
         document.getElementById("pPassword").classList.remove("passwordError");
+        inputC = false;
     }
     if (letras <= 0 || nume <= 0 || password.indexOf(" ") > -1) {
         document.getElementById('password').style.border = "3px solid red";
         document.getElementById("pPassword").classList.remove("passwordError");
+        inputC = false;
     } else {
         document.getElementById('password').style.border = "3px solid green";
         inputC = true;
@@ -136,26 +143,50 @@ function verifyPassword2() {
     } else {
         document.getElementById("pPassword2").classList.remove("password2Error");
         document.getElementById("password2").style.border = "3px solid red";
+        inputD = false;
     }
 }
 
 
 //-------------------AGE------------------------//
 
-function verifyAge() {
-    var age = document.getElementById('age').value;
+// function verifyAge() {
+//     var age = document.getElementById('age').value;
 
-    if (age <= 17) {
-        document.getElementById('pAge').classList.remove("errorAge");
-        document.getElementById('age').style.border = "3px solid red";
-    } else {
-        alert("autorizado");
-        document.getElementById('age').style.border = "3px solid green";
-        inputE = true;
+//     if (age <= 17) {
+//         document.getElementById('pAge').classList.remove("errorAge");
+//         document.getElementById('age').style.border = "3px solid red";
+//     } else {
+//         alert("autorizado");
+//         document.getElementById('age').style.border = "3px solid green";
+//         inputE = true;
 
+//     }
+
+// }
+
+//----------------------BIRTH DATE--------------------//
+
+
+/*function verifyAge(fecha_nacimiento) {
+    var hoy = new Date();
+    var cumpleanos = new Date(fecha_nacimiento);
+    var edad = hoy.getFullYear() - cumpleanos.getFullYear();
+    var m = hoy.getMonth() - cumpleanos.getMonth();
+    if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+        edad--;
     }
-
+    return edad;
 }
+
+var edad = verifyAge("2000/08/10");
+if (edad >= 18) {
+    alert("Eres mayor de edad :D ");
+    alert(verifyAge(document.getElementById('fechanaci').value))
+} else {
+    alert("Eres menor de edad :( ");
+}
+*/
 
 
 //-----------PHONE-----------------// input type number
@@ -164,9 +195,10 @@ function phoneNumber() {
     if (phone.length < 7) {
         document.getElementById("phone").style.border = "3px solid red";
         document.getElementById("pPhone").classList.remove("errorPhone");
+        inputF = false;
     } else {
         document.getElementById("phone").style.border = "3px solid green";
-        inputF
+        inputF = true;
     }
 }
 
@@ -186,11 +218,13 @@ function verifyAdress() {
         } else {
             document.getElementById("adress").style.border = '3px solid red';
             document.getElementById('pAdress').classList.remove('errorAdress');
+            inputG = false;
         }
 
     } else {
         document.getElementById("adress").style.border = '3px solid red';
         document.getElementById('pAdress').classList.remove('errorAdress');
+        inputG = false;
     }
 }
 
@@ -200,6 +234,7 @@ function fromcity() {
     if (city.length < 3) {
         document.getElementById('city').style.border = '3px solid red';
         document.getElementById('cityText').classList.remove('errorCity');
+        inputH = false;
     } else {
         document.getElementById('city').style.border = '3px solid green';
         inputH = true;
@@ -213,6 +248,7 @@ function code() {
     if (postalCode.length < 3) {
         document.getElementById('postalCode').style.border = '3px solid red';
         document.getElementById('postalText').classList.remove('errorCode');
+        inputI = false
     } else {
         document.getElementById('postalCode').style.border = '3px solid green';
         inputI = true
@@ -224,17 +260,18 @@ function dni() {
     var nid = document.getElementById('dni').value
 
     if (nid.length > 6) {
-        console.log('ok')
         if (nid.length <= 8) {
             document.getElementById('dni').style.border = '3px solid green';
             inputJ = true;
         } else {
             document.getElementById('dni').style.border = '3px solid red';
             document.getElementById('dniText').classList.remove('errorDni')
+            inputJ = false;
         }
     } else {
         document.getElementById('dni').style.border = '3px solid red';
         document.getElementById('dniText').classList.remove('errorDni')
+        inputJ = false;
     }
 }
 // saludo
@@ -245,8 +282,7 @@ function dni() {
     document.getElementById("great").value = name
 })
 */
-// }
-function greeting(event) {
+/*function greeting(event) {
     //     leer nombre
     const name = document.getElementById("name").value;
     // document.getElementById("great").value = name;
@@ -258,7 +294,7 @@ function greeting(event) {
     } else {
         document.getElementById("great") = name;
     }
-}
+}*/
 
 // nombre .= event.key
 // 14:44
@@ -278,7 +314,7 @@ function correccionName() {
 }
 
 function correctionLastName() {
-    document.getElementById('last-name').style.border = "5px solid lightgray";
+    document.getElementById('lastName').style.border = "5px solid lightgray";
     document.getElementById('p-last-Name').classList.add("error-last-Name");
 }
 
@@ -371,30 +407,67 @@ function blurPostal() {
 function blurDni() {
     dni()
 }
+//--------------------Cartel Emergente----------------------//
+var firstNamePrint = document.getElementById("name")
 
+var lastNamePrint = document.getElementById("lastName")
 
+var iDNumberPrint = document.getElementById("dni")
+
+var phonePrint = document.getElementById("phone")
+
+var addressPrint = document.getElementById("adress")
+
+var cityPrint = document.getElementById("city")
+
+var zipPrint = document.getElementById("postalCode");
+
+var emailPrint = document.getElementById("mail");
+
+var passwordPrint = document.getElementById("password");
+
+var confirmPasswordPrint = document.getElementById("password2");
+
+function confirmSubmit() {
+    alert(
+        "Your first name is: " + firstNamePrint.value +
+        "\nYour last name is: " + lastNamePrint.value +
+        "\nYour ID Number is: " + iDNumberPrint.value +
+        "\nYour phone number is: " + phonePrint.value +
+        "\nYour address is: " + addressPrint.value +
+        "\nYour city is: " + cityPrint.value +
+        "\nYour zip code is: " + zipPrint.value +
+        "\nYour email is: " + emailPrint.value +
+        "\nYour password is: " + passwordPrint.value +
+        "\nYour confirm password is: " + confirmPasswordPrint.value
+    )
+}
+
+function confirm() {
+    if (inputA == true && inputB == true && inputC == true && inputD == true && inputE == true && inputF == true && inputG == true && inputH == true && inputI == true) {
+        alert(confirmSubmit())
+    } else {
+        alert('Please, enter valid values')
+    }
+}
 
 function handleOnSubmit() {
     verifyName();
     verifyMail();
     verifyPassword1();
     verifyPassword2();
-    verifyAge();
+    // verifyAge();
     phoneNumber();
     verifyAdress();
     fromcity();
     code();
     dni();
-    verifyLastName()
+    verifyLastName();
+    confirm();
 }
-
 window.onload = function() {
     document.getElementById("inscription").addEventListener('submit', function(event) {
         event.preventDefault()
     })
-    if (inputA == true && inputB == true && inputC == true && inputD == true && inputE == true && inputF == true && inputG == true && inputH == true && inputI == true && inputJ == true) {
-        alert('Formulario completado con Exito')
-    } else {
-        console.log('formulario incompleto o con errores')
-    }
+
 }
