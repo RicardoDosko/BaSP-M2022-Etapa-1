@@ -25,7 +25,7 @@ function verifyName() {
             document.getElementById('name').style.border = "3px solid red";
             document.getElementById('pName').classList.remove("errorName");
             inputA = false
-            return ("escribe respuesta correcta");
+
 
         }
     }
@@ -50,6 +50,7 @@ function verifyLastName() {
         if (!abc.includes(lastName[i].toLowerCase())) {
             document.getElementById('lastName').style.border = "3px solid red";
             document.getElementById('p-last-Name').classList.remove("error-last-Name");
+            inputE = false;
             return ("escribe respuesta correcta");
 
         }
@@ -115,7 +116,7 @@ function verifyPassword1() {
             nume++;
         }
     }
-    if (password.length >= 8) {
+    if (password.length - 1 >= 8) {
         document.getElementById('password').style.border = "3px solid green";
         inputC = true;
     } else {
@@ -295,7 +296,9 @@ function dni() {
         document.getElementById("great") = name;
     }
 }*/
-
+function blurDni() {
+    dni()
+}
 // nombre .= event.key
 // 14:44
 // de lo contrario
@@ -367,84 +370,45 @@ function correccionDni() {
     document.getElementById('dni').style.border = '5px solid lightgray';
     document.getElementById('dniText').classList.add('errorDni')
 }
-//funciones blur
-function blurName() {
-    verifyName();
-}
 
-function blurMail() {
-    verifyMail();
-}
-
-function blurPass1() {
-    verifyPassword1();
-}
-
-function blurpass2() {
-    verifyPassword2();
-}
-
-function blurAge() {
-    verifyAge();
-}
-
-function blurPhone() {
-    phoneNumber();
-}
-
-function blurAdress() {
-    verifyAdress()
-}
-
-function blurCity() {
-    fromcity();
-}
-
-function blurPostal() {
-    code()
-}
-
-function blurDni() {
-    dni()
-}
 //--------------------Cartel Emergente----------------------//
-var firstNamePrint = document.getElementById("name")
+var firstNamePrint = document.getElementById("name").value;
 
-var lastNamePrint = document.getElementById("lastName")
+var lastNamePrint = document.getElementById("lastName").value;
 
-var iDNumberPrint = document.getElementById("dni")
+var iDNumberPrint = document.getElementById("dni").value;
 
-var phonePrint = document.getElementById("phone")
+var phonePrint = document.getElementById("phone").value;
 
-var addressPrint = document.getElementById("adress")
+var addressPrint = document.getElementById("adress").value;
 
-var cityPrint = document.getElementById("city")
+var cityPrint = document.getElementById("city").value;
 
-var zipPrint = document.getElementById("postalCode");
+var zipPrint = document.getElementById("postalCode").value;
 
-var emailPrint = document.getElementById("mail");
+var emailPrint = document.getElementById("mail").value;
 
-var passwordPrint = document.getElementById("password");
+var passwordPrint = document.getElementById("password").value;
 
-var confirmPasswordPrint = document.getElementById("password2");
+var confirmPasswordPrint = document.getElementById("password2").value;
 
 function confirmSubmit() {
     alert(
-        "Your first name is: " + firstNamePrint.value +
-        "\nYour last name is: " + lastNamePrint.value +
-        "\nYour ID Number is: " + iDNumberPrint.value +
-        "\nYour phone number is: " + phonePrint.value +
-        "\nYour address is: " + addressPrint.value +
-        "\nYour city is: " + cityPrint.value +
-        "\nYour zip code is: " + zipPrint.value +
-        "\nYour email is: " + emailPrint.value +
-        "\nYour password is: " + passwordPrint.value +
-        "\nYour confirm password is: " + confirmPasswordPrint.value
+        "Your first name is: " + firstNamePrint +
+        "\nYour last name is: " + lastNamePrint +
+        "\nYour ID Number is: " + iDNumberPrint +
+        "\nYour phone number is: " + phonePrint +
+        "\nYour address is: " + addressPrint +
+        "\nYour city is: " + cityPrint +
+        "\nYour zip code is: " + zipPrint +
+        "\nYour email is: " + emailPrint +
+        "\nYour password is: " + passwordPrint +
+        "\nYour confirm password is: " + confirmPasswordPrint
     )
 }
 
 function confirm() {
-    if (inputA == true && inputB == true && inputC == true && inputD == true && inputE == true && inputF == true && inputG == true && inputH == true && inputI == true) {
+    if (inputA == true && inputE == true && inputB == true && inputC == true && inputD == true && inputF == true && inputG == true && inputH == true && inputI == true) {
         alert(confirmSubmit())
     } else {
         alert('Please, enter valid values')

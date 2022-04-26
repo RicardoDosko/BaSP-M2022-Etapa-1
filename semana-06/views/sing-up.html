@@ -41,57 +41,57 @@
                             </li>
                             <li class="mail">
                                 <label for="mail">E-mail:</label>
-                                <input type="email" id="mail" name="user_mail" placeholder="example@example.com" onfocus="correccionMail()" onblur="blurMail()">
+                                <input type="email" id="mail" name="user_mail" placeholder="example@example.com" onfocus="correccionMail()" onblur="verifyMail()">
                                 <p id="pMail" class="errorEmail colorError">Must have a valid email format</p>
                             </li>
                             <li>
                                 <label for="password">Password:</label>
-                                <input type="password" id="password" name="pass" placeholder="debe contener al menos 8 caracteres " onfocus="correccionPass()" onblur="blurPass1()">
+                                <input type="password" id="password" name="pass" placeholder="debe contener al menos 8 caracteres " onfocus="correccionPass()" onblur="verifyPassword1()">
                                 <p id="pPassword" class="passwordError colorError">At least 8 characters, made up of letters and numbers.</p>
 
                             </li>
                             <li>
                                 <label for="password2">Confirm Password:</label>
-                                <input type="password" id="password2" name="pass" placeholder="debe coincidir contraseña" onfocus="correccionPass2()" onblur="blurpass2()">
+                                <input type="password" id="password2" name="pass" placeholder="debe coincidir contraseña" onfocus="correccionPass2()" onblur="verifyPassword2()">
                                 <p id="pPassword2" class="password2Error colorError ">passwords must match</p>
                             </li>
                             <li>
-                                <label>Date of birth:</label>
-                                <input type='Date' value='' id="fechanaci" required>
+                                <!-- <label>Date of birth:</label>
+                                <input type='Date' value='' id="fechanaci" required> -->
 
 
                                 <!-- <label for="age">Edad:</label>
                                 <input type="number" id="age" name="age" placeholder="Debe ser mayor de 18 años" onfocus="correccionAge()" onblur="blurAge()"> -->
-                                <!-- <label for="start">Date of birth:</label>
+                                <label for="start">Date of birth:</label>
                                 <input type="date" id="dateOfBirth" name="date-of-birth"> -->
-                                <!-- <p id="pAge" class="errorAge colorError">You must be over 18 years old</p> -->
+                                <p id="pAge" class="errorAge colorError">You must be over 18 years old</p>
                             </li>
                         </div>
                         <div class="twopart">
                             <li>
                                 <label for="phoneNumber">Phone number:</label>
-                                <input type="number" id="phone" name="phoneNumbers" placeholder="3415501646" onfocus="correccionPhone()" onblur=" blurPhone()">
+                                <input type="number" id="phone" name="phoneNumbers" placeholder="3415501646" onfocus="correccionPhone()" onblur="phoneNumber()">
                                 <p id="pPhone" class="errorPhone colorError">Must contain at least 7 numbers</p>
                             </li>
                             <li>
                                 <label for="adress">Address:</label>
-                                <input type="text" id="adress" name="adress" placeholder="ejemplo 453" onfocus="correccionAdress()" onblur="blurAdress()">
+                                <input type="text" id="adress" name="adress" placeholder="ejemplo 453" onfocus="correccionAdress()" onblur="verifyAdress()">
                                 <p id="pAdress" class="errorAdress colorError">At least 5 characters, with letters, numbers, and a space in between</p>
                             </li>
                             <li>
                                 <label for="city">city:</label>
-                                <input type="city" name="city" id="city" placeholder="Ejemplo" onfocus="correccionCity()" onblur="blurCity()">
+                                <input type="city" name="city" id="city" placeholder="Ejemplo" onfocus="correccionCity()" onblur="fromcity()">
                                 <p id="cityText" class="errorCity colorError">Debe contener al menos 3 caracteres</p>
                             </li>
                             <li>
                                 <label for="postalCode">Postal Code:</label>
-                                <input type="text" name="postal" id="postalCode" onfocus="correccionCode()" onblur="blurPostal()">
+                                <input type="text" name="postal" id="postalCode" onfocus="correccionCode()" onblur="code()">
                                 <p id="postalText" class="errorCode colorError">Must contain more than 3 digits</p>
 
                             </li>
 
                             <li>
-                                <label for="identityDocument">Identification Card:</label>
+                                <label for="dni">Identification Card:</label>
                                 <input type="number" name="dni" id="dni" onfocus="correccionDni()" onblur="blurDni()">
                                 <p id="dniText" class="errorDni colorError">Must contain 7 or 8 digits</p>
                             </li>
@@ -101,7 +101,7 @@
 
                         </div>
                     </ul>
-                    <div id="modal" class="modal-content">
+                    <!-- <div id="modal" class="modal-content">
                         <div class="modal-header">
                             <span class="close">&times;</span>
                             <h2>Your Data</h2>
@@ -113,7 +113,7 @@
                         <div class="modal-footer">
                             <h3>Thanks for trusting us</h3>
                         </div>
-                    </div>
+                    </div> -->
                 </form>
             </div>
         </div>
