@@ -97,7 +97,7 @@ form {
 li {
     display: flex;
     flex-direction: column;
-    height: 50px;
+    height: 80px;
     border: 1px;
     margin-bottom: 30px;
     color: aliceblue;

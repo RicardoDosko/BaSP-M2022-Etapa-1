@@ -1,33 +1,19 @@
+var inputA;
+var inputB
+
 function verifyMail() {
     var email = document.getElementById('mail').value;
     var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     if (!validateEmail.test(email)) {
         document.getElementById('mail').style.border = '3px solid red';
         document.getElementById('pMail').classList.remove('errorEmail');
+        inputA = false;
     } else {
         console.log("entro")
         document.getElementById('mail').style.border = '3px solid green';
+        inputA = true
     }
 }
-
-/*if (arroba !== -1 && punto !== -1) {
-    console.log("paso")
-    if (arroba > 0 && punto > arroba + 1 && punto < correo.length - 1) {
-        document.getElementById("mail").style.border = "3px solid green";
-
-        inputB = true;
-
-    } else {
-
-        document.getElementById("mail").style.border = "3px solid red";
-        document.getElementById('pMail').classList.remove("errorEmail");
-    }
-} else {
-    document.getElementById('pMail').classList.remove("errorEmail");
-    document.getElementById("mail").style.border = "3px solid red";
-}*/
-
-
 
 
 function verifyPassword1() {
@@ -44,17 +30,21 @@ function verifyPassword1() {
         }
     }
     // h,o,l,a,1,2,3,4
-    if (password.length - 1 > 8) {
+    if (password.length > 7) {
         document.getElementById('password').style.border = "3px solid green";
+        inputB = true;
     } else {
         document.getElementById('password').style.border = "3px solid red";
         document.getElementById("pPassword").classList.remove("passwordError");
+        inputB = false;
     }
     if (letras <= 0 || nume <= 0 || password.indexOf(" ") > -1) {
         document.getElementById('password').style.border = "3px solid red";
         document.getElementById("pPassword").classList.remove("passwordError");
+        inputB = false;
     } else {
         document.getElementById('password').style.border = "3px solid green";
+        inputB = true;
 
     }
 }
@@ -70,9 +60,28 @@ function correccionPass() {
 }
 
 
+function confirmSubmit() {
+    var emailPrint = document.getElementById("mail").value;
+    var passwordPrint = document.getElementById("password").value;
+    alert(
+        "Your email is: " + emailPrint +
+        "\nYour password is: " + passwordPrint);
+}
+
+function confirm() {
+    if (inputA == true && inputB == true) {
+        confirmSubmit()
+    } else {
+        alert('Please, enter valid values')
+    }
+}
+
+
+// HandleOnSubmit
+
+
 function handleOnSubmit() {
-    verifyMail();
-    verifyPassword1();
+    confirm();
 }
 window.onload = function() {
     document.getElementById("inscription").addEventListener('submit', function(event) {

@@ -114,6 +114,16 @@ a {
 
 /* FORMULARIO */
 
+.errorName,
+.errorMail,
+.pMsg {
+    display: none;
+}
+
+.colorError {
+    color: red
+}
+
 .box-color-fs {
     width: 218px;
     height: 3px;

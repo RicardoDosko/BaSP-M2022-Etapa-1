@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="../javascript/contact.js"></script>
     <title>Radium Rocket</title>
 </head>
 
@@ -215,14 +216,15 @@
                     Get in touch with us
                 </h2>
                 <div class="box-color-fs"></div>
-                <form action="test">
+                <form action="test" id="formContact" method="post" onsubmit="handleOnSubmit()">
                     <div class="form-part-first">
                         <div class="form-part-one">
                             <div class="inputs-form">
                                 <label for="name">
                                     Full Name:
                                 </label>
-                                <input class="name" type="text" value="Juan Perez" name="user_name">
+                                <input id="fullName" class="name" type="text" placeholder="Juan Perez" onfocus="verifyFullName()" onblur="fullNameInput()">
+                                <p id="pName" class="errorName colorError">Invalid value</p>
                             </div>
                             <div class="inputs-form">
                                 <label for="area">
@@ -246,7 +248,8 @@
                                 <label for="mail">
                                     Email Adress:
                                 </label>
-                                <input class="mail-form" id="mail" type="email" name="user_mail">
+                                <input id="email" type="email" class="mail-form" name="user_mail" onfocus="verifyMail()" onblur="eMail()">
+                                <p id="pMail" class="errorMail">Invalid value</p>
                             </div>
                             <div class="inputs-form">
                                 <label for="optios">
@@ -264,7 +267,8 @@
                         <label for="msg">
                             Ask about our system:
                         </label>
-                        <textarea class="textarea" id="msg" name="user-message"></textarea>
+                        <textarea class="textarea" id="msg" name="user-message" onfocus="verifyMsg()" onblur="messageInput()"></textarea>
+                        <p id="errorMsg" class="pMsg colorError">You have to write something</p>
                     </div>
                     <div class="form-part-four">
                         <div class="checkbox">

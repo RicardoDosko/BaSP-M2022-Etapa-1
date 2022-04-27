@@ -169,25 +169,27 @@ function verifyPassword2() {
 //----------------------BIRTH DATE--------------------//
 
 
-/*function verifyAge(fecha_nacimiento) {
-    var hoy = new Date();
-    var cumpleanos = new Date(fecha_nacimiento);
-    var edad = hoy.getFullYear() - cumpleanos.getFullYear();
-    var m = hoy.getMonth() - cumpleanos.getMonth();
-    if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
-        edad--;
+function checkDOB() {
+    var dob = document.getElementById("dateOfBirth").value
+    console.log("dob", typeof dob)
+    var dateDOB = new Date(dob).getTime();
+
+    var diff = new Date().getTime() - dateDOB;
+
+    age = Math.trunc(diff / (1000 * 60 * 60 * 24 * 365.25));
+    if (age >= 18) {
+        inputK = true
+        alert("es mayor")
+        document.getElementById("dateOfBirth").style.border = "3px solid green"
+    } else {
+        inputK = false
+        alert("es menor")
+        document.getElementById("dateOfBirth").style.border = "3px solid red"
+        document.getElementById("pAge").classList.remove("errorAge")
     }
-    return edad;
 }
 
-var edad = verifyAge("2000/08/10");
-if (edad >= 18) {
-    alert("Eres mayor de edad :D ");
-    alert(verifyAge(document.getElementById('fechanaci').value))
-} else {
-    alert("Eres menor de edad :( ");
-}
-*/
+
 
 
 //-----------PHONE-----------------// input type number
@@ -372,27 +374,28 @@ function correccionDni() {
 }
 
 //--------------------Cartel Emergente----------------------//
-var firstNamePrint = document.getElementById("name").value;
-
-var lastNamePrint = document.getElementById("lastName").value;
-
-var iDNumberPrint = document.getElementById("dni").value;
-
-var phonePrint = document.getElementById("phone").value;
-
-var addressPrint = document.getElementById("adress").value;
-
-var cityPrint = document.getElementById("city").value;
-
-var zipPrint = document.getElementById("postalCode").value;
-
-var emailPrint = document.getElementById("mail").value;
-
-var passwordPrint = document.getElementById("password").value;
-
-var confirmPasswordPrint = document.getElementById("password2").value;
-
 function confirmSubmit() {
+    var firstNamePrint = document.getElementById("name").value;
+
+    var lastNamePrint = document.getElementById("lastName").value;
+
+    var iDNumberPrint = document.getElementById("dni").value;
+    var phonePrint = document.getElementById("phone").value;
+
+    var addressPrint = document.getElementById("adress").value;
+
+    var cityPrint = document.getElementById("city").value;
+
+    var zipPrint = document.getElementById("postalCode").value;
+
+    var emailPrint = document.getElementById("mail").value;
+
+    var passwordPrint = document.getElementById("password").value;
+
+    var confirmPasswordPrint = document.getElementById("password2").value;
+
+
+
     alert(
         "Your first name is: " + firstNamePrint +
         "\nYour last name is: " + lastNamePrint +
@@ -403,30 +406,21 @@ function confirmSubmit() {
         "\nYour zip code is: " + zipPrint +
         "\nYour email is: " + emailPrint +
         "\nYour password is: " + passwordPrint +
-        "\nYour confirm password is: " + confirmPasswordPrint
+        "\nYour confirm password is: " + confirmPasswordPrint +
+        "\nYour age is: " + age
     )
 }
 
 function confirm() {
-    if (inputA == true && inputE == true && inputB == true && inputC == true && inputD == true && inputF == true && inputG == true && inputH == true && inputI == true) {
-        alert(confirmSubmit())
+    if (inputA == true && inputE == true && inputB == true && inputC == true && inputD == true &&
+        inputF == true && inputG == true && inputH == true && inputI == true && inputK == true) {
+        confirmSubmit()
     } else {
         alert('Please, enter valid values')
     }
 }
 
 function handleOnSubmit() {
-    verifyName();
-    verifyMail();
-    verifyPassword1();
-    verifyPassword2();
-    // verifyAge();
-    phoneNumber();
-    verifyAdress();
-    fromcity();
-    code();
-    dni();
-    verifyLastName();
     confirm();
 }
 window.onload = function() {
