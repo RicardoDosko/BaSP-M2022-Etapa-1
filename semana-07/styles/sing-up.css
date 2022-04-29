@@ -1,0 +1,347 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #373867;
+    width: 100%;
+    height: 51px;
+    padding: 13px 0;
+}
+
+input {
+    height: 30px;
+}
+
+.rr-logo {
+    height: 51px;
+    margin: 0 13px;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    float: right;
+    font-weight: 700;
+}
+
+h2 {
+    display: flex;
+    color: rgb(55, 56, 103);
+    justify-content: center;
+}
+
+
+/* .labelStyle {
+    display: flex;
+    justify-content: center;
+    color: rgb(122, 188, 112);
+    font-size: 40px;
+} */
+
+.greatStyle {
+    display: flex;
+    align-self: center;
+    color: white;
+    border-color: black;
+    background-color: black;
+    font-size: 40px;
+}
+
+.logo {
+    height: 50px;
+    position: relative;
+}
+
+.form-Container {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    justify-content: center;
+    align-self: center;
+    margin: 0px;
+}
+
+.sing-up-container {
+    padding: 8%;
+}
+
+form {
+    padding: 20px;
+    width: 90%;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color: white;
+    margin: 0px;
+}
+
+.formul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.one-part {
+    width: 100%;
+}
+
+.twopart {
+    width: 100%;
+}
+
+
+/* div {
+    width: 45%;
+} */
+
+li {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    border: 1px;
+    margin-bottom: 30px;
+    color: aliceblue;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+label {
+    width: 200px;
+    text-align: left;
+    color: #373867;
+}
+
+input,
+textarea {
+    font: 1em sans-serif;
+    width: auto;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+.bottonContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0%;
+}
+
+.sing-up-button {
+    width: 100px;
+    height: 50px;
+    background-color: #AACE9B;
+    border: none;
+    border-radius: 5%;
+    margin-top: 17px;
+}
+
+
+/* clases name */
+
+.errorName {
+    display: none;
+}
+
+.error-last-Name {
+    display: none;
+}
+
+
+/* clases email */
+
+.errorEmail {
+    display: none;
+}
+
+
+/*   password 1    */
+
+.passwordError {
+    display: none;
+}
+
+
+/*   password 2    */
+
+.password2Error {
+    display: none;
+}
+
+
+/* age */
+
+.errorAge {
+    display: none;
+}
+
+.errorPhone {
+    display: none;
+}
+
+.errorAdress {
+    display: none;
+}
+
+.errorCity {
+    display: none;
+}
+
+.errorCode {
+    display: none;
+}
+
+.errorDni {
+    display: none;
+}
+
+.colorError {
+    color: red;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 24px;
+}
+
+.box-color-footer {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #AACE9B;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 254px;
+    margin-bottom: 24px;
+}
+
+.city {
+    margin-bottom: 24px;
+}
+
+.footer-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: rgb(170, 206, 155);
+    color: white;
+}
+
+
+/* Modal Body */
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+
+/* Modal Footer */
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: rgb(170, 206, 155);
+    color: white;
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* Add Animation */
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.modal-content {
+    display: none;
+}
+
+@media (min-width: 481px) {
+    footer {
+        display: flex;
+        align-items: flex-start;
+    }
+    .footer-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-description {
+        display: flex;
+        align-items: flex-start;
+    }
+    .logo {
+        width: 80%;
+        height: auto;
+    }
+    .one-part {
+        width: 45%;
+    }
+    .twopart {
+        width: 45%;
+    }
+    .formul {
+        display: flex;
+        flex-direction: row;
+    }
+    .form-Container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    .inscription {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+    }
+}
+
+@media (min-width: 769px) {
+    footer {
+        position: relative;
+        padding: 20px 24px;
+    }
+    .footer-description {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .footer-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
