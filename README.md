@@ -106,8 +106,15 @@ https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 ```
 In week 6, the log in and sing up screens were created with their respective css and js files, 
 so that with the latter, the validations of the different forms of the new screens could be carried out.
+```
+https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html
 
-https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-06/view/index.html
+## Week 07
+```
+Here below, the link from the seventh week (API fetch):
+https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-07/views/index.html
+```
+
 
 _By Ricardo Nery Dosko_
 
