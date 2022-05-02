@@ -1,5 +1,5 @@
-var inputA;
-var inputB
+var inputA = false;
+var inputB = false;
 
 function verifyMail() {
     var email = document.getElementById('mail').value;
@@ -68,17 +68,53 @@ function confirmSubmit() {
         "\nYour password is: " + passwordPrint);
 }
 
+
 function confirm() {
+    console.log("entra confirm")
     if (inputA == true && inputB == true) {
-        confirmSubmit()
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
+        var listKey = ['email', 'password'];
+        var listValue = [document.getElementById("mail").value, document.getElementById("password").value]
+        loginFetch(url, listKey, listValue)
     } else {
         alert('Please, enter valid values')
     }
 }
 
+// var email = document.getElementById(mail).value
+// var password = document.getElementById(password).value
 
-// HandleOnSubmit
+// fetch (https://basp-m2022-api-rest-server.herokuapp.com/login)
 
+var listKey = []
+var listValue = []
+
+function joinParams(listKey, listValue) {
+
+    var myArr = [];
+    for (let i = 0; i < listKey.length; i++) {
+        myArr.push(listKey[i].concat('=', listValue[i]))
+
+    }
+    return myArr.join("&")
+}
+
+function loginFetch(url, listKey, listValue) {
+    var queryParams = joinParams(listKey, listValue);
+    var fetchUrl = url.concat("?", queryParams)
+    fetch(fetchUrl)
+        .then(function(response) {
+            response.json()
+                .then(function(result) {
+                    console.log('result', result);
+                    alert(result.msg);
+                    confirmSubmit();
+                });
+        })
+        .catch(function(result) {
+            alert("error" + result);
+        });
+};
 
 function handleOnSubmit() {
     confirm();

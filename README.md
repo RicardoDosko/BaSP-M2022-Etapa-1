@@ -112,8 +112,9 @@ https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html
 ## Week 07
 ```
 Here below, the link from the seventh week (API fetch):
-https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-07/views/index.html
 ```
+https://ricardodosko.github.io/BaSP-M2022-Etapa-1/semana-07/views/index.html
+
 
 
 _By Ricardo Nery Dosko_

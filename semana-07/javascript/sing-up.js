@@ -211,22 +211,22 @@ function phoneNumber() {
 //debe tener letras y numeros
 // debe superar los 5 caracteres
 
-function verifyAdress() {
-    var adress = document.getElementById("adress").value
-    if (adress.indexOf(" ") > -1 && adress.indexOf(" ") < adress.length - 2) {
-        if (adress.length > 5) {
-            document.getElementById("adress").style.border = '3px solid green';
+function verifyAddress() {
+    var address = document.getElementById("address").value
+    if (address.indexOf(" ") > -1 && address.indexOf(" ") < address.length - 2) {
+        if (address.length > 5) {
+            document.getElementById("address").style.border = '3px solid green';
             inputG = true;
 
         } else {
-            document.getElementById("adress").style.border = '3px solid red';
-            document.getElementById('pAdress').classList.remove('errorAdress');
+            document.getElementById("address").style.border = '3px solid red';
+            document.getElementById('pAddress').classList.remove('errorAddress');
             inputG = false;
         }
 
     } else {
-        document.getElementById("adress").style.border = '3px solid red';
-        document.getElementById('pAdress').classList.remove('errorAdress');
+        document.getElementById("address").style.border = '3px solid red';
+        document.getElementById('pAddress').classList.remove('errorAddress');
         inputG = false;
     }
 }
@@ -348,9 +348,9 @@ function correccionPhone() {
     document.getElementById("pPhone").classList.add("errorPhone");
 }
 
-function correccionAdress() {
-    document.getElementById("adress").style.border = '5px solid lightgray';
-    document.getElementById('pAdress').classList.add("errorAdress");
+function correccionAddress() {
+    document.getElementById("address").style.border = '5px solid lightgray';
+    document.getElementById('pAddress').classList.add("errorAddress");
 }
 
 function correccionCity() {
@@ -373,27 +373,20 @@ function correccionDni() {
     document.getElementById('dniText').classList.add('errorDni')
 }
 
+
+
 //--------------------Cartel Emergente----------------------//
 function confirmSubmit() {
     var firstNamePrint = document.getElementById("name").value;
-
     var lastNamePrint = document.getElementById("lastName").value;
-
     var iDNumberPrint = document.getElementById("dni").value;
     var phonePrint = document.getElementById("phone").value;
-
-    var addressPrint = document.getElementById("adress").value;
-
+    var addressPrint = document.getElementById("address").value;
     var cityPrint = document.getElementById("city").value;
-
     var zipPrint = document.getElementById("postalCode").value;
-
     var emailPrint = document.getElementById("mail").value;
-
     var passwordPrint = document.getElementById("password").value;
-
     var confirmPasswordPrint = document.getElementById("password2").value;
-
 
 
     alert(
@@ -414,10 +407,74 @@ function confirmSubmit() {
 function confirm() {
     if (inputA == true && inputE == true && inputB == true && inputC == true && inputD == true &&
         inputF == true && inputG == true && inputH == true && inputI == true && inputK == true) {
-        confirmSubmit()
+        var firstNamePrint = document.getElementById("name").value;
+        var lastNamePrint = document.getElementById("lastName").value;
+        var iDNumberPrint = document.getElementById("dni").value;
+        var phonePrint = document.getElementById("phone").value;
+        var addressPrint = document.getElementById("address").value;
+        var cityPrint = document.getElementById("city").value;
+        var zipPrint = document.getElementById("postalCode").value;
+        var emailPrint = document.getElementById("mail").value;
+        var passwordPrint = document.getElementById("password").value;
+        var confirmPasswordPrint = document.getElementById("password2").value;
+        var dob = document.getElementById("dateOfBirth").value;
+
+        var dob = new Date(document.getElementById("dateOfBirth").value)
+        var year = dob.getFullYear()
+        var day = dob.getDate()
+        var month = dob.getMonth()
+
+        function dateDay() {
+            if (day < 10) {
+                return '0' + day
+            }
+        }
+
+        function dateMonth() {
+            if (month < 10) {
+                return '0' + month
+            }
+        }
+
+        var dateBirth = dateMonth() + dateDay() + year
+
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
+        var listKey = ["name", "lastName", "dni", "phone", "address", "city", "zip", "email", "password", "password2", "dob"]
+        var listValue = [firstNamePrint, lastNamePrint, iDNumberPrint, phonePrint, addressPrint, cityPrint, zipPrint, emailPrint, passwordPrint, confirmPasswordPrint, dob]
+        loginFetch(url, listKey, listValue)
     } else {
         alert('Please, enter valid values')
     }
+}
+var listKey = []
+var listValue = []
+
+function joinParams(listKey, listValue) {
+
+    var myArr = [];
+    for (let i = 0; i < listKey.length; i++) {
+        myArr.push(listKey[i].concat('=', listValue[i]))
+
+    }
+    return myArr.join("&")
+}
+
+function loginFetch(url, listKey, listValue) {
+    var queryParams = joinParams(listKey, listValue);
+    var fetchUrl = url.concat("?", queryParams)
+    fetch(fetchUrl)
+
+    .then(function(response) {
+            console.log("response", response)
+            response.json().then(function(result) {
+                console.log('result', result);
+                alert(result.msg)
+                confirmSubmit()
+            })
+        })
+        .catch(function(result) {
+            alert("error" + result)
+        })
 }
 
 function handleOnSubmit() {
@@ -429,3 +486,23 @@ window.onload = function() {
     })
 
 }
+
+/*
+{
+    "success": false,
+    "errors": [
+        {
+            "value": "2001-01-01",
+            "msg": "Date of birth must have format MM/DD/YYYY",
+            "param": "dob",
+            "location": "query"
+        },
+        {
+            "value": "Entre Rios 4979",
+            "msg": "Address must have a space in the middle",
+            "param": "address",
+            "location": "query"
+        }
+    ]
+}
+    */

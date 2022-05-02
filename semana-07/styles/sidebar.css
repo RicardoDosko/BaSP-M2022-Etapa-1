@@ -24,7 +24,7 @@
         font-family: roboto;
     }
     
-    .span-adress {
+    .span-address {
         display: flex;
         flex-direction: column;
     }
