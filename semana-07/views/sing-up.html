@@ -1,116 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/sing-up.css">
-    <script src="../javascript/sing-up.js"></script>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='../styles/reset.css'>
+    <link rel='stylesheet' href='../styles/style.css'>
+    <link rel='stylesheet' href='../styles/sing-up.css'>
+    <script src='../javascript/sing-up.js'></script>
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <a href="./index.html"><img class="rr-logo" href="./index.html" src="../assets/icons/trackgenix-logo.png" alt="logo-header"></a>
+        <a href='./index.html'><img class='rr-logo' href='./index.html' src='../assets/icons/trackgenix-logo.png' alt='logo-header'></a>
         <h1>
             Trackgenix SA
         </h1>
-        <img class="sidebar-menu" src="../assets/icons/sidebar-icon.png" alt="sidebar">
+        <img class='sidebar-menu' src='../assets/icons/sidebar-icon.png' alt='sidebar'>
     </header>
-    <div class="sing-up-container">
-        <div class="form-container">
+    <div class='sing-up-container'>
+        <div class='form-container'>
             <h2>
                 Sing-up
             </h2>
-            <div class="formContainer">
-                <form class="inscription" id="inscription" action="/my-handling-form-page" method="post" onsubmit="handleOnSubmit()">
-                    <ul class="formul">
-                        <div class="one-part">
-                            <li id="names">
-                                <label for="name">First Name:</label>
-                                <input type="text" id="name" name="user_name" placeholder="Juan" onfocus="correccionName()" onblur="verifyName()">
-                                <p id="pName" class="errorName colorError">Must contain at least 3 letters</p>
+            <div class='formContainer'>
+                <form class='inscription' id='inscription' action='/my-handling-form-page' method='post' onsubmit='handleOnSubmit()'>
+                    <ul class='formul'>
+                        <div class='one-part'>
+                            <li id='names'>
+                                <label for='name'>First Name:</label>
+                                <input type='text' id='name' name='user_name' placeholder='Juan' onfocus='correccionName()' onblur='verifyName()'>
+                                <p id='pName' class='errorName colorError'>Must contain at least 3 letters</p>
                             </li>
-                            <li id="last-name">
-                                <label for="lastName">Last Name:</label>
-                                <input type="text" id="lastName" name="user_name" placeholder="Perez" onfocus="correctionLastName()" onblur="verifyLastName()">
-                                <p id="p-last-Name" class="error-last-Name colorError">Must contain at least 3 letters</p>
+                            <li id='last-name'>
+                                <label for='lastName'>Last Name:</label>
+                                <input type='text' id='lastName' name='user_name' placeholder='Perez' onfocus='correctionLastName()' onblur='verifyLastName()'>
+                                <p id='p-last-Name' class='error-last-Name colorError'>Must contain at least 3 letters</p>
                             </li>
-                            <li class="mail">
-                                <label for="mail">E-mail:</label>
-                                <input type="email" id="mail" name="user_mail" placeholder="example@example.com" onfocus="correccionMail()" onblur="verifyMail()">
-                                <p id="pMail" class="errorEmail colorError">Must have a valid email format</p>
+                            <li class='mail'>
+                                <label for='mail'>E-mail:</label>
+                                <input type='email' id='mail' name='user_mail' placeholder='example@example.com' onfocus='correccionMail()' onblur='verifyMail()'>
+                                <p id='pMail' class='errorEmail colorError'>Must have a valid email format</p>
                             </li>
                             <li>
-                                <label for="password">Password:</label>
-                                <input type="password" id="password" name="pass" placeholder="debe contener al menos 8 caracteres " onfocus="correccionPass()" onblur="verifyPassword1()">
-                                <p id="pPassword" class="passwordError colorError">At least 8 characters, made up of letters and numbers.</p>
+                                <label for='password'>Password:</label>
+                                <input type='password' id='password' name='pass' placeholder='debe contener al menos 8 caracteres ' onfocus='correccionPass()' onblur='verifyPassword1()'>
+                                <p id='pPassword' class='passwordError colorError'>At least 8 characters, made up of letters and numbers.</p>
 
                             </li>
                             <li>
-                                <label for="password2">Confirm Password:</label>
-                                <input type="password" id="password2" name="pass" placeholder="debe coincidir contraseña" onfocus="correccionPass2()" onblur="verifyPassword2()">
-                                <p id="pPassword2" class="password2Error colorError ">passwords must match</p>
+                                <label for='password2'>Confirm Password:</label>
+                                <input type='password' id='password2' name='pass' placeholder='debe coincidir contraseña' onfocus='correccionPass2()' onblur='verifyPassword2()'>
+                                <p id='pPassword2' class='password2Error colorError '>passwords must match</p>
                             </li>
                             <li>
                                 <!-- <label>Date of birth:</label>
-                                <input type='Date' value='' id="fechanaci" required> -->
-                                <!-- <label for="start">Date of birth:</label>
-                                <input type="date" id="fechaNacimiento" min="1930-01-01" max="2022-04-26" onblur="calcularEdad()">-->
-                                <!-- <label for="age">Edad:</label>
-                                <input type="number" id="age" name="age" placeholder="Debe ser mayor de 18 años" onfocus="correccionAge()" onblur="blurAge()"> -->
-                                <label for="start">Date of birth:</label>
-                                <input type="date" id="dateOfBirth" name="date-of-birth" onblur="checkDOB()">
-                                <p id="pAge" class="errorAge colorError">You must be over 18 years old</p>
+                                <input type='Date' value='' id='fechanaci' required> -->
+                                <!-- <label for='start'>Date of birth:</label>
+                                <input type='date' id='fechaNacimiento' min='1930-01-01' max='2022-04-26' onblur='calcularEdad()'>-->
+                                <!-- <label for='age'>Edad:</label>
+                                <input type='number' id='age' name='age' placeholder='Debe ser mayor de 18 años' onfocus='correccionAge()' onblur='blurAge()'> -->
+                                <label for='start'>Date of birth:</label>
+                                <input type='date' id='dateOfBirth' name='date-of-birth' onblur='checkDOB()'>
+                                <p id='pAge' class='errorAge colorError'>You must be over 18 years old</p>
                             </li>
                         </div>
-                        <div class="twopart">
+                        <div class='twopart'>
                             <li>
-                                <label for="phoneNumber">Phone number:</label>
-                                <input type="number" id="phone" name="phoneNumbers" placeholder="3415501646" onfocus="correccionPhone()" onblur="phoneNumber()">
-                                <p id="pPhone" class="errorPhone colorError">Must contain at least 7 numbers</p>
+                                <label for='phoneNumber'>Phone number:</label>
+                                <input type='number' id='phone' name='phoneNumbers' placeholder='3415501646' onfocus='correccionPhone()' onblur='phoneNumber()'>
+                                <p id='pPhone' class='errorPhone colorError'>Must contain at least 7 numbers</p>
                             </li>
                             <li>
-                                <label for="address">Address:</label>
-                                <input type="text" id="address" name="address" placeholder="ejemplo 453" onfocus="correccionAddress()" onblur="verifyAddress()">
-                                <p id="pAddress" class="errorAddress colorError">At least 5 characters, with letters, numbers, and a space in between</p>
+                                <label for='address'>Address:</label>
+                                <input type='text' id='address' name='address' placeholder='ejemplo 453' onfocus='correccionAddress()' onblur='verifyAddress()'>
+                                <p id='pAddress' class='errorAddress colorError'>At least 5 characters, with letters, numbers, and a space in between</p>
                             </li>
                             <li>
-                                <label for="city">city:</label>
-                                <input type="city" name="city" id="city" placeholder="Ejemplo" onfocus="correccionCity()" onblur="fromcity()">
-                                <p id="cityText" class="errorCity colorError">Debe contener al menos 3 caracteres</p>
+                                <label for='city'>city:</label>
+                                <input type='city' name='city' id='city' placeholder='Ejemplo' onfocus='correccionCity()' onblur='fromcity()'>
+                                <p id='cityText' class='errorCity colorError'>Debe contener al menos 3 caracteres</p>
                             </li>
                             <li>
-                                <label for="postalCode">Postal Code:</label>
-                                <input type="text" name="postal" id="postalCode" onfocus="correccionCode()" onblur="code()">
-                                <p id="postalText" class="errorCode colorError">Must contain more than 3 digits</p>
+                                <label for='postalCode'>Postal Code:</label>
+                                <input type='text' name='postal' id='postalCode' onfocus='correccionCode()' onblur='code()'>
+                                <p id='postalText' class='errorCode colorError'>Must contain more than 3 digits</p>
 
                             </li>
 
                             <li>
-                                <label for="dni">Identification Card:</label>
-                                <input type="number" name="dni" id="dni" onfocus="correccionDni()" onblur="blurDni()">
-                                <p id="dniText" class="errorDni colorError">Must contain 7 or 8 digits</p>
+                                <label for='dni'>Identification Card:</label>
+                                <input type='number' name='dni' id='dni' onfocus='correccionDni()' onblur='blurDni()'>
+                                <p id='dniText' class='errorDni colorError'>Must contain 7 or 8 digits</p>
                             </li>
-                            <li class="button">
-                                <button type="submit" class="sing-up-button">Create</button>
+                            <li class='button'>
+                                <button type='submit' class='sing-up-button'>Create</button>
                             </li>
 
                         </div>
                     </ul>
-                    <!-- <div id="modal" class="modal-content">
-                        <div class="modal-header">
-                            <span class="close">&times;</span>
+                    <!-- <div id='modal' class='modal-content'>
+                        <div class='modal-header'>
+                            <span class='close'>&times;</span>
                             <h2>Your Data</h2>
                         </div>
-                        <div class="modal-body">
+                        <div class='modal-body'>
                             <p>Some text in the Modal Body</p>
                             <p>Some other text...</p>
                         </div>
-                        <div class="modal-footer">
+                        <div class='modal-footer'>
                             <h3>Thanks for trusting us</h3>
                         </div>
                     </div> -->
@@ -118,29 +118,29 @@
             </div>
         </div>
     </div>
-    <div class="box-color-footer"></div>
+    <div class='box-color-footer'></div>
     <footer>
 
-        <div class="footer-description">
-            <div class="social-media">
-                <a href="#">
-                    <img class="icon-links" src="../assets/icons/In.png" alt="Linkedin">
+        <div class='footer-description'>
+            <div class='social-media'>
+                <a href='#'>
+                    <img class='icon-links' src='../assets/icons/In.png' alt='Linkedin'>
                 </a>
-                <a href="#">
-                    <img class="icon-links" src="../assets/icons/twitter.png" alt="twitter">
+                <a href='#'>
+                    <img class='icon-links' src='../assets/icons/twitter.png' alt='twitter'>
                 </a>
-                <a href="#">
-                    <img class="icon-links" src="../assets/icons/face.png" alt="facebook">
+                <a href='#'>
+                    <img class='icon-links' src='../assets/icons/face.png' alt='facebook'>
                 </a>
-                <a href="#">
-                    <img class="icon-links" src="../assets/icons/Instagram.png" alt="Instagram">
+                <a href='#'>
+                    <img class='icon-links' src='../assets/icons/Instagram.png' alt='Instagram'>
                 </a>
-                <a href="#">
-                    <img class="icon-links" src="../assets/icons/git.png" alt="git">
+                <a href='#'>
+                    <img class='icon-links' src='../assets/icons/git.png' alt='git'>
                 </a>
             </div>
-            <div class="footer-text">
-                <p class="city">
+            <div class='footer-text'>
+                <p class='city'>
                     Rosario, Argentina
                 </p>
                 <p>

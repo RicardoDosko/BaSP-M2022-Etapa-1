@@ -1,80 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="../javascript/login.js"></script>
+    <link rel='stylesheet' href='../styles/reset.css'>
+    <link rel='stylesheet' href='../styles/style.css'>
+    <link rel='stylesheet' href='../styles/login.css'>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap' rel='stylesheet'>
+    <script src='../javascript/login.js'></script>
     <title>Radium Rocket</title>
 </head>
 
 <body>
     <header>
-        <a href="./index.html"><img class="rr-logo" href="./index.html" src="../assets/icons/trackgenix-logo.png" alt="logo-header"></a>
+        <a href='./index.html'><img class='rr-logo' href='./index.html' src='../assets/icons/trackgenix-logo.png' alt='logo-header'></a>
         <h1>
             Trackgenix SA
         </h1>
-        <img class="sidebar-menu" src="../assets/icons/sidebar-icon.png" alt="sidebar">
+        <img class='sidebar-menu' src='../assets/icons/sidebar-icon.png' alt='sidebar'>
     </header>
-    <div class="Login-container">
-        <div class="form-container">
+    <div class='Login-container'>
+        <div class='form-container'>
             <h2>
                 Log In
             </h2>
-            <form class="inscription" id="inscription" action="/my-handling-form-page" method="post" onsubmit="handleOnSubmit()">
-                <ul class="form">
-                    <div class="block-login">
-                        <li class="mail">
-                            <label for="mail">email:</label>
-                            <input type="email" id="mail" class="email" name="user_mail" placeholder="ejemplo@ejemplo.com" onfocus="correccionMail()" onblur="verifyMail()">
-                            <p id="pMail" class="errorEmail colorError">it must contain a valid email</p>
+            <form class='inscription' id='inscription' action='/my-handling-form-page' method='post' onsubmit='handleOnSubmit()'>
+                <ul class='form'>
+                    <div class='block-login'>
+                        <li class='mail'>
+                            <label for='mail'>email:</label>
+                            <input type='email' id='mail' class='email' name='user_mail' placeholder='ejemplo@ejemplo.com' onfocus='correccionMail()' onblur='verifyMail()'>
+                            <p id='pMail' class='errorEmail colorError'>it must contain a valid email</p>
                         </li>
-                        <li class="container-password">
-                            <label class="pass" for="password">password:</label>
-                            <input type="password" class="pass" id="password" name="pass" placeholder="At least it must contain 8 characters" onfocus="correccionPass()" onblur="verifyPassword1()">
-                            <p id="pPassword" class="passwordError colorError">At least it must contain 8 characters</p>
+                        <li class='container-password'>
+                            <label class='pass' for='password'>password:</label>
+                            <input type='password' class='pass' id='password' name='pass' placeholder='At least it must contain 8 characters' onfocus='correccionPass()' onblur='verifyPassword1()'>
+                            <p id='pPassword' class='passwordError colorError'>At least it must contain 8 characters</p>
                         </li>
                     </div>
-                    <div class="buttons">
-                        <button type="submit" class="login">Login</button>
-                        <button class="forgot">Forgot Password?</button>
+                    <div class='buttons'>
+                        <button type='submit' class='login'>Login</button>
+                        <button class='forgot'>Forgot Password?</button>
                     </div>
                 </ul>
             </form>
         </div>
     </div>
     <div>
-        <div class="box-color-footer"></div>
+        <div class='box-color-footer'></div>
         <footer>
 
-            <div class="footer-description">
-                <div class="social-media">
-                    <a href="#">
-                        <img class="icon-links" src="../assets/icons/In.png" alt="Linkedin">
+            <div class='footer-description'>
+                <div class='social-media'>
+                    <a href='#'>
+                        <img class='icon-links' src='../assets/icons/In.png' alt='Linkedin'>
                     </a>
-                    <a href="#">
-                        <img class="icon-links" src="../assets/icons/twitter.png" alt="twitter">
+                    <a href='#'>
+                        <img class='icon-links' src='../assets/icons/twitter.png' alt='twitter'>
                     </a>
-                    <a href="#">
-                        <img class="icon-links" src="../assets/icons/face.png" alt="facebook">
+                    <a href='#'>
+                        <img class='icon-links' src='../assets/icons/face.png' alt='facebook'>
                     </a>
-                    <a href="#">
-                        <img class="icon-links" src="../assets/icons/Instagram.png" alt="Instagram">
+                    <a href='#'>
+                        <img class='icon-links' src='../assets/icons/Instagram.png' alt='Instagram'>
                     </a>
-                    <a href="#">
-                        <img class="icon-links" src="../assets/icons/git.png" alt="git">
+                    <a href='#'>
+                        <img class='icon-links' src='../assets/icons/git.png' alt='git'>
                     </a>
                 </div>
-                <div class="footer-text">
-                    <p class="city">
+                <div class='footer-text'>
+                    <p class='city'>
                         Rosario, Argentina
                     </p>
                     <p>

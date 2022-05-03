@@ -182,7 +182,7 @@ textarea {
 .form-part-four {
     display: flex;
     justify-content: space-around;
-    font-family: "Roboto" "bold";
+    font-family: 'Roboto' 'bold';
     margin-bottom: 42px;
 }
 

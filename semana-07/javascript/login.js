@@ -9,7 +9,7 @@ function verifyMail() {
         document.getElementById('pMail').classList.remove('errorEmail');
         inputA = false;
     } else {
-        console.log("entro")
+        console.log('entro')
         document.getElementById('mail').style.border = '3px solid green';
         inputA = true
     }
@@ -17,7 +17,7 @@ function verifyMail() {
 
 
 function verifyPassword1() {
-    const abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     const password = document.getElementById('password').value;
     var letras = 0;
     var nume = 0;
@@ -31,50 +31,50 @@ function verifyPassword1() {
     }
     // h,o,l,a,1,2,3,4
     if (password.length > 7) {
-        document.getElementById('password').style.border = "3px solid green";
+        document.getElementById('password').style.border = '3px solid green';
         inputB = true;
     } else {
-        document.getElementById('password').style.border = "3px solid red";
-        document.getElementById("pPassword").classList.remove("passwordError");
+        document.getElementById('password').style.border = '3px solid red';
+        document.getElementById('pPassword').classList.remove('passwordError');
         inputB = false;
     }
-    if (letras <= 0 || nume <= 0 || password.indexOf(" ") > -1) {
-        document.getElementById('password').style.border = "3px solid red";
-        document.getElementById("pPassword").classList.remove("passwordError");
+    if (letras <= 0 || nume <= 0 || password.indexOf(' ') > -1) {
+        document.getElementById('password').style.border = '3px solid red';
+        document.getElementById('pPassword').classList.remove('passwordError');
         inputB = false;
     } else {
-        document.getElementById('password').style.border = "3px solid green";
+        document.getElementById('password').style.border = '3px solid green';
         inputB = true;
 
     }
 }
 //focus 
 function correccionMail() {
-    document.getElementById("mail").style.border = "5px solid lightgray";
+    document.getElementById('mail').style.border = '5px solid lightgray';
     document.getElementById('pMail').classList.add('errorEmail');
 }
 
 function correccionPass() {
-    document.getElementById("password").style.border = "5px solid lightgray";
-    document.getElementById('pPassword').classList.add("passwordError");
+    document.getElementById('password').style.border = '5px solid lightgray';
+    document.getElementById('pPassword').classList.add('passwordError');
 }
 
 
 function confirmSubmit() {
-    var emailPrint = document.getElementById("mail").value;
-    var passwordPrint = document.getElementById("password").value;
+    var emailPrint = document.getElementById('mail').value;
+    var passwordPrint = document.getElementById('password').value;
     alert(
-        "Your email is: " + emailPrint +
-        "\nYour password is: " + passwordPrint);
+        'Your email is: ' + emailPrint +
+        '\nYour password is: ' + passwordPrint);
 }
 
 
 function confirm() {
-    console.log("entra confirm")
+    console.log('entra confirm')
     if (inputA == true && inputB == true) {
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
         var listKey = ['email', 'password'];
-        var listValue = [document.getElementById("mail").value, document.getElementById("password").value]
+        var listValue = [document.getElementById('mail').value, document.getElementById('password').value]
         loginFetch(url, listKey, listValue)
     } else {
         alert('Please, enter valid values')
@@ -96,12 +96,12 @@ function joinParams(listKey, listValue) {
         myArr.push(listKey[i].concat('=', listValue[i]))
 
     }
-    return myArr.join("&")
+    return myArr.join('&')
 }
 
 function loginFetch(url, listKey, listValue) {
     var queryParams = joinParams(listKey, listValue);
-    var fetchUrl = url.concat("?", queryParams)
+    var fetchUrl = url.concat('?', queryParams)
     fetch(fetchUrl)
         .then(function(response) {
             response.json()
@@ -112,7 +112,7 @@ function loginFetch(url, listKey, listValue) {
                 });
         })
         .catch(function(result) {
-            alert("error" + result);
+            alert('error' + result);
         });
 };
 
@@ -120,7 +120,7 @@ function handleOnSubmit() {
     confirm();
 }
 window.onload = function() {
-    document.getElementById("inscription").addEventListener('submit', function(event) {
+    document.getElementById('inscription').addEventListener('submit', function(event) {
         event.preventDefault()
     })
 }
