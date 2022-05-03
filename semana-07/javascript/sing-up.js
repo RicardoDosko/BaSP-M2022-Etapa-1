@@ -25,8 +25,6 @@ function verifyName() {
             document.getElementById('name').style.border = '3px solid red';
             document.getElementById('pName').classList.remove('errorName');
             inputA = false
-
-
         }
     }
 
@@ -404,6 +402,7 @@ function confirmSubmit() {
     )
 }
 
+
 function confirm() {
     if (inputA == true && inputE == true && inputB == true && inputC == true && inputD == true &&
         inputF == true && inputG == true && inputH == true && inputI == true && inputK == true) {
@@ -419,13 +418,11 @@ function confirm() {
         var confirmPasswordPrint = document.getElementById('password2').value;
         var dob = document.getElementById('dateOfBirth').value;
 
-        var date = dob;
-        var year = date.substring(0, 4)
-        var months = date.substring(5, 7)
-        var day = date.substring(8, 10)
-        var inputsDate = months + '/' + day + '/' + year
-
-
+        var date = dob;;
+        var year = date.substring(0, 4);
+        var months = date.substring(5, 7);
+        var day = date.substring(8, 10);
+        var inputsDate = months + '/' + day + '/' + year;
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
         var listKey = ['name', 'lastName', 'dni', 'phone', 'address', 'city', 'zip', 'email', 'password', 'password2', 'dob']
         var listValue = [firstNamePrint, lastNamePrint, iDNumberPrint, phonePrint, addressPrint, cityPrint, zipPrint, emailPrint, passwordPrint, confirmPasswordPrint, inputsDate]
@@ -450,19 +447,48 @@ function joinParams(listKey, listValue) {
 function loginFetch(url, listKey, listValue) {
     var queryParams = joinParams(listKey, listValue);
     var fetchUrl = url.concat('?', queryParams)
-    fetch(fetchUrl)
+    var firstNamePrint = document.getElementById('name').value;
+    var lastNamePrint = document.getElementById('lastName').value;
+    var iDNumberPrint = document.getElementById('dni').value;
+    var phonePrint = document.getElementById('phone').value;
+    var addressPrint = document.getElementById('address').value;
+    var cityPrint = document.getElementById('city').value;
+    var zipPrint = document.getElementById('postalCode').value;
+    var emailPrint = document.getElementById('mail').value;
+    var passwordPrint = document.getElementById('password').value;
+    var confirmPasswordPrint = document.getElementById('password2').value;
+    var dob = document.getElementById('dateOfBirth').value;
 
-    .then(function(response) {
-            console.log('response', response)
-            response.json().then(function(result) {
-                console.log('result', result);
-                alert(result.msg)
-                confirmSubmit()
-            })
+    fetch(fetchUrl)
+        .then(function(response) {
+            return response.json()
         })
-        .catch(function(result) {
-            alert('error' + result)
+        .then(function(jsonResponse) {
+            if (jsonResponse.success) {
+
+                localStorage.setItem('id', jsonResponse.data.id)
+                localStorage.setItem('name', firstNamePrint)
+                localStorage.setItem('lastName', lastNamePrint)
+                localStorage.setItem('identNumber', iDNumberPrint)
+                localStorage.setItem('dateOfBirth', dob)
+                localStorage.setItem('phoneNumber', phonePrint)
+                localStorage.setItem('address', addressPrint)
+                localStorage.setItem('city', cityPrint)
+                localStorage.setItem('zipCode', zipPrint);
+                localStorage.setItem('email', emailPrint);
+                localStorage.setItem('password', passwordPrint);
+                localStorage.setItem('confirmPassword', confirmPasswordPrint)
+                alert(jsonResponse.msg + "Succesfully created");
+            } else {
+                alert("Error", jsonResponse.msg)
+            }
         })
+        .catch(function(error) {
+            console.log(error)
+        })
+    confirmSubmit()
+
+
 }
 
 function handleOnSubmit() {
@@ -472,6 +498,19 @@ window.onload = function() {
     document.getElementById('inscription').addEventListener('submit', function(event) {
         event.preventDefault()
     })
+    if (localStorage.getItem('id') != null) {
+        localStorage.getItem('name', firstNamePrint)
+        localStorage.getItem('lastname', lastNamePrint)
+        localStorage.getItem('dni', iDNumberPrint)
+        localStorage.getItem('phone', phonePrint)
+        localStorage.getItem('address', addressPrint)
+        localStorage.getItem('city', cityPrint)
+        localStorage.getItem('zip', zipPrint)
+        localStorage.getItem('email', emailPrint)
+        localStorage.getItem('password', passwordPrint)
+        localStorage.getItem('password2', confirmPasswordPrint)
+        localStorage.getItem('dob', dob)
+    }
 
 }
 
