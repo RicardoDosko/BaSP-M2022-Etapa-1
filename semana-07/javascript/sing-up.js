@@ -1,4 +1,3 @@
-// VARIABLES PARA CORROBORAR FORMULARIO COMPLETO CORRECTAMENTE //
 var inputA;
 var inputB;
 var inputC;
@@ -9,12 +8,6 @@ var inputG;
 var inputH;
 var inputI;
 var inputJ;
-
-//------------------NAME-----------------// FALTARIA NEGAR QUE SEA NUMBER
-
-// verificar que el nombre sea un string
-// verificar que tenga un espacio en medio
-//verifivar que tenga mas de 6 caracteres
 
 function verifyName() {
     const abc = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -27,7 +20,6 @@ function verifyName() {
             inputA = false
         }
     }
-
     if (name.length < 3) {
         document.getElementById('name').style.border = '3px solid red';
         document.getElementById('pName').classList.remove('errorName');
@@ -37,8 +29,6 @@ function verifyName() {
         inputA = true;
     }
 }
-
-//---------------------LAST NAME------------------//
 
 function verifyLastName() {
     const abc = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -50,10 +40,8 @@ function verifyLastName() {
             document.getElementById('p-last-Name').classList.remove('error-last-Name');
             inputE = false;
             return ('escribe respuesta correcta');
-
         }
     }
-
     if (lastName.length < 3) {
         document.getElementById('lastName').style.border = '3px solid red';
         document.getElementById('p-last-Name').classList.remove('error-last-Name');
@@ -62,26 +50,17 @@ function verifyLastName() {
         document.getElementById('lastName').style.border = '3px solid green';
         inputE = true;
     }
-
 }
 
-
-
-//--------------------EMAIL-----------------------//
 function verifyMail() {
     var correo = document.getElementById('mail').value;
-
-
     const arroba = correo.indexOf('@');
     const punto = correo.lastIndexOf('.');
     if (arroba !== -1 && punto !== -1) {
         if (arroba > 0 && punto > arroba + 1 && punto < correo.length - 1) {
             document.getElementById('mail').style.border = '3px solid green';
-
             inputB = true;
-
         } else {
-
             document.getElementById('mail').style.border = '3px solid red';
             document.getElementById('pMail').classList.remove('errorEmail');
             inputB = false;
@@ -91,15 +70,7 @@ function verifyMail() {
         document.getElementById('mail').style.border = '3px solid red';
         inputB = false;
     }
-
-
 }
-
-//---------------------PASSWORD-----------------------/ 
-//la contraseña debe tener como minimo de 8 caracteres
-//no debe contener espacios
-// debe ser alfanumerica
-
 
 function verifyPassword1() {
     const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -132,7 +103,6 @@ function verifyPassword1() {
     }
 }
 
-//---------------------PASSWORD 2-----------------------/ /
 function verifyPassword2() {
     const p1 = document.getElementById('password').value;
     const p2 = document.getElementById('password2').value;
@@ -145,27 +115,6 @@ function verifyPassword2() {
         inputD = false;
     }
 }
-
-
-//-------------------AGE------------------------//
-
-// function verifyAge() {
-//     var age = document.getElementById('age').value;
-
-//     if (age <= 17) {
-//         document.getElementById('pAge').classList.remove('errorAge');
-//         document.getElementById('age').style.border = '3px solid red';
-//     } else {
-//         alert('autorizado');
-//         document.getElementById('age').style.border = '3px solid green';
-//         inputE = true;
-
-//     }
-
-// }
-
-//----------------------BIRTH DATE--------------------//
-
 
 function checkDOB() {
     var dob = document.getElementById('dateOfBirth').value
@@ -187,10 +136,6 @@ function checkDOB() {
     }
 }
 
-
-
-
-//-----------PHONE-----------------// input type number
 function phoneNumber() {
     var phone = document.getElementById('phone').value;
     if (phone.length < 7) {
@@ -202,12 +147,6 @@ function phoneNumber() {
         inputF = true;
     }
 }
-
-
-//-----------Domicile--------------//
-// debe tener espacio entre medio
-//debe tener letras y numeros
-// debe superar los 5 caracteres
 
 function verifyAddress() {
     var address = document.getElementById('address').value
@@ -229,7 +168,6 @@ function verifyAddress() {
     }
 }
 
-//--------------------CITY-------------------//
 function fromcity() {
     var city = document.getElementById('city').value;
     if (city.length < 3) {
@@ -241,8 +179,6 @@ function fromcity() {
         inputH = true;
     }
 }
-
-//------------------Postal Code-----------------//
 
 function code() {
     var postalCode = document.getElementById('postalCode').value
@@ -256,10 +192,8 @@ function code() {
     }
 }
 
-//----------------DNI-------------------------/
 function dni() {
     var nid = document.getElementById('dni').value
-
     if (nid.length > 6) {
         if (nid.length <= 8) {
             document.getElementById('dni').style.border = '3px solid green';
@@ -275,41 +209,11 @@ function dni() {
         inputJ = false;
     }
 }
-// saludo
 
-/*document.addEventListener('keydown', function(event) {
-    console.log('hola')
-    const name = document.getElementById('name').value;
-    document.getElementById('great').value = name
-})
-*/
-/*function greeting(event) {
-    //     leer nombre
-    const name = document.getElementById('name').value;
-    // document.getElementById('great').value = name;
-    // si keyCode === espacio en blanco ó keyCode >= 65 y  keyCode <= 90
-    if (keyCode === ' ' || (keyCode >= 65 && keyCode <= 90)) {
-        name += event.key;
-    } else if (keycode === 8) {
-        name.substring(0, name.length - 1)
-    } else {
-        document.getElementById('great') = name;
-    }
-}*/
 function blurDni() {
     dni()
 }
-// nombre .= event.key
-// 14:44
-// de lo contrario
-// 14:44
-// si keyCode === 8
-// 14:44
-// nombre.substr(0,nombre.length-1)
-// 14:44
-// doc. geteleÇ().v = name
-// funciones focus
-//part one
+
 function correccionName() {
     // document.querySelector('.errorName').classList.add('errorName');
     document.getElementById('pName').classList.add('errorName');
@@ -340,7 +244,7 @@ function correccionAge() {
     document.getElementById('age').style.border = '5px solid lightgray';
     document.getElementById('pAge').classList.add('errorAge');
 }
-//part two
+
 function correccionPhone() {
     document.getElementById('phone').style.border = '5px solid Lightgray';
     document.getElementById('pPhone').classList.add('errorPhone');
@@ -352,18 +256,13 @@ function correccionAddress() {
 }
 
 function correccionCity() {
-    // document.getElementById('city').style.border = '5px solid lightgray';
-    // document.getElementById('citytext').classList.add('errorCity ');
     document.getElementById('city').style.border = '5px solid lightgray';
     document.getElementById('cityText').classList.add('errorCity')
 }
 
 function correccionCode() {
-    // document.getElementById('postalCode').style.border = '5px solid lightgray';
-    // document.getElementById('postalText').classList.add('errorCode ');
     document.getElementById('postalCode').style.border = '5px solid lightgray';
     document.getElementById('postalText').classList.add('errorCode')
-
 }
 
 function correccionDni() {
@@ -371,9 +270,6 @@ function correccionDni() {
     document.getElementById('dniText').classList.add('errorDni')
 }
 
-
-
-//--------------------Cartel Emergente----------------------//
 function confirmSubmit() {
     var firstNamePrint = document.getElementById('name').value;
     var lastNamePrint = document.getElementById('lastName').value;
@@ -385,8 +281,6 @@ function confirmSubmit() {
     var emailPrint = document.getElementById('mail').value;
     var passwordPrint = document.getElementById('password').value;
     var confirmPasswordPrint = document.getElementById('password2').value;
-
-
     alert(
         'Your first name is: ' + firstNamePrint +
         '\nYour last name is: ' + lastNamePrint +
@@ -400,8 +294,19 @@ function confirmSubmit() {
         '\nYour confirm password is: ' + confirmPasswordPrint +
         '\nYour age is: ' + age
     )
-}
+    var modal = document.getElementById('modal').classList.remove('modal-content')
+    document.getElementById('firstNameModal').innerText = 'Your first name is: ' + firstNamePrint
+    document.getElementById('lastNameModal').innerText = 'Your last name is: ' + lastNamePrint
+    document.getElementById('idNumberModal').innerText = 'Your ID Number is: ' + iDNumberPrint
+    document.getElementById('dobModal').innerText = 'Your age is: ' + age
+    document.getElementById('phoneModal').innerText = 'Your phone number is: ' + phonePrint
+    document.getElementById('addressModal').innerText = 'Your addres is: ' + addressPrint
+    document.getElementById('cityModal').innerText = 'Your City is: ' + cityPrint
+    document.getElementById('zipModal').innerText = 'Your Zip Code is: ' + zipPrint
+    document.getElementById('mailModal').innerText = 'Your e-mail is: ' + emailPrint
+    document.getElementById('passwordModal').innerText = 'Your password is: ' + passwordPrint
 
+}
 
 function confirm() {
     if (inputA == true && inputE == true && inputB == true && inputC == true && inputD == true &&
@@ -417,7 +322,6 @@ function confirm() {
         var passwordPrint = document.getElementById('password').value;
         var confirmPasswordPrint = document.getElementById('password2').value;
         var dob = document.getElementById('dateOfBirth').value;
-
         var date = dob;;
         var year = date.substring(0, 4);
         var months = date.substring(5, 7);
@@ -435,11 +339,9 @@ var listKey = []
 var listValue = []
 
 function joinParams(listKey, listValue) {
-
     var myArr = [];
     for (let i = 0; i < listKey.length; i++) {
         myArr.push(listKey[i].concat('=', listValue[i]))
-
     }
     return myArr.join('&')
 }
@@ -458,14 +360,12 @@ function loginFetch(url, listKey, listValue) {
     var passwordPrint = document.getElementById('password').value;
     var confirmPasswordPrint = document.getElementById('password2').value;
     var dob = document.getElementById('dateOfBirth').value;
-
     fetch(fetchUrl)
         .then(function(response) {
             return response.json()
         })
         .then(function(jsonResponse) {
             if (jsonResponse.success) {
-
                 localStorage.setItem('id', jsonResponse.data.id)
                 localStorage.setItem('name', firstNamePrint)
                 localStorage.setItem('lastName', lastNamePrint)
@@ -487,8 +387,6 @@ function loginFetch(url, listKey, listValue) {
             console.log(error)
         })
     confirmSubmit()
-
-
 }
 
 function handleOnSubmit() {
@@ -511,25 +409,4 @@ window.onload = function() {
         localStorage.getItem('password2', confirmPasswordPrint)
         localStorage.getItem('dob', dob)
     }
-
 }
-
-/*
-{
-    'success': false,
-    'errors': [
-        {
-            'value': '2001-01-01',
-            'msg': 'Date of birth must have format MM/DD/YYYY',
-            'param': 'dob',
-            'location': 'query'
-        },
-        {
-            'value': 'Entre Rios 4979',
-            'msg': 'Address must have a space in the middle',
-            'param': 'address',
-            'location': 'query'
-        }
-    ]
-}
-    */

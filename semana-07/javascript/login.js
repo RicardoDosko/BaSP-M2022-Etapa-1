@@ -15,7 +15,6 @@ function verifyMail() {
     }
 }
 
-
 function verifyPassword1() {
     const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     const password = document.getElementById('password').value;
@@ -48,7 +47,7 @@ function verifyPassword1() {
 
     }
 }
-//focus 
+
 function correccionMail() {
     document.getElementById('mail').style.border = '5px solid lightgray';
     document.getElementById('pMail').classList.add('errorEmail');
@@ -63,11 +62,10 @@ function correccionPass() {
 function confirmSubmit() {
     var emailPrint = document.getElementById('mail').value;
     var passwordPrint = document.getElementById('password').value;
-    alert(
-        'Your email is: ' + emailPrint +
-        '\nYour password is: ' + passwordPrint);
+    var modal = document.getElementById('modal').classList.remove('modal-content')
+    document.getElementById('mailModal').innerText = 'Your e-mail is: ' + emailPrint
+    document.getElementById('passwordModal').innerText = 'Your password is: ' + passwordPrint
 }
-
 
 function confirm() {
     console.log('entra confirm')
@@ -81,20 +79,13 @@ function confirm() {
     }
 }
 
-// var email = document.getElementById(mail).value
-// var password = document.getElementById(password).value
-
-// fetch (https://basp-m2022-api-rest-server.herokuapp.com/login)
-
 var listKey = []
 var listValue = []
 
 function joinParams(listKey, listValue) {
-
     var myArr = [];
     for (let i = 0; i < listKey.length; i++) {
         myArr.push(listKey[i].concat('=', listValue[i]))
-
     }
     return myArr.join('&')
 }
