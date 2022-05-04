@@ -33,7 +33,6 @@ function verifyName() {
 function verifyLastName() {
     const abc = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     const lastName = document.getElementById('lastName').value;
-    //aca verificamos que sea un nombre
     for (let i = 0; i < lastName.length; i++) {
         if (!abc.includes(lastName[i].toLowerCase())) {
             document.getElementById('lastName').style.border = '3px solid red';
@@ -126,11 +125,11 @@ function checkDOB() {
     age = Math.trunc(diff / (1000 * 60 * 60 * 24 * 365.25));
     if (age >= 18) {
         inputK = true
-        alert('es mayor')
+        alert('you are an adult')
         document.getElementById('dateOfBirth').style.border = '3px solid green'
     } else {
         inputK = false
-        alert('es menor')
+        alert('you are underage')
         document.getElementById('dateOfBirth').style.border = '3px solid red'
         document.getElementById('pAge').classList.remove('errorAge')
     }

@@ -9,7 +9,6 @@ function verifyMail() {
         document.getElementById('pMail').classList.remove('errorEmail');
         inputA = false;
     } else {
-        console.log('entro')
         document.getElementById('mail').style.border = '3px solid green';
         inputA = true
     }
